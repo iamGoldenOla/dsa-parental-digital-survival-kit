@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   // This would typically fetch the post data from a CMS or database
   const post = {
-    title: 'Understanding Your Child's Digital World',
+    title: 'Understanding Your Child\'s Digital World',
     content: `
       <p>In today's digital age, children are growing up surrounded by technology. As parents, it's crucial to understand the digital landscape your children navigate daily.</p>
 
@@ -117,4 +117,17 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       </section>
     </div>
   )
+}
+
+export function generateStaticParams() {
+  return [
+    { slug: 'best-educational-apps' },
+    { slug: 'cyberbullying-prevention' },
+    { slug: 'digital-safety-conversations' },
+    { slug: 'online-privacy-guide' },
+    { slug: 'parental-controls-guide' },
+    { slug: 'screen-time-management' },
+    { slug: 'social-media-safety-guide' },
+    { slug: 'social-media-safety-guide-new' },
+  ];
 } 

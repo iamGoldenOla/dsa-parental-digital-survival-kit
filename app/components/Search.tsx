@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from 'react'
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
@@ -19,24 +21,24 @@ export default function Search() {
   const mockSearch = (searchQuery: string): SearchResult[] => {
     const allContent = [
       {
-        title: 'Understanding Your Child's Digital World',
-        description: 'A comprehensive guide to the apps, games, and platforms your children are using.',
+        title: "Understanding Your Child's Digital World",
+        description: "A comprehensive guide to the apps, games, and platforms your children are using.",
         url: '/blog/understanding-digital-world',
         type: 'blog'
       },
       {
-        title: 'Digital Safety Assessment',
-        description: 'Evaluate your family's current digital safety practices.',
+        title: "Digital Safety Assessment",
+        description: "Evaluate your family's current digital safety practices.",
         url: '/toolkit/safety-assessment',
         type: 'toolkit'
       },
       {
         title: 'Family Link App Guide',
-        description: 'Google's parental control app for managing your child's digital experience.',
+        description: "Google's parental control app for managing your child's digital experience.",
         url: '/resources/family-link',
         type: 'resource'
       }
-    ]
+    ] as const
 
     return allContent.filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

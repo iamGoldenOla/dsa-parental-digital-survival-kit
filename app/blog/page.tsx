@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function BlogPage() {
   const featuredPosts = [
     {
-      title: 'Understanding Your Child's Digital World',
+      title: 'Understanding Your Child\'s Digital World',
       excerpt: 'A comprehensive guide to the apps, games, and platforms your children are using.',
       image: '/images/blog/digital-world.jpg',
       date: 'March 15, 2024',
@@ -14,7 +14,7 @@ export default function BlogPage() {
     },
     {
       title: 'Setting Healthy Screen Time Limits',
-      excerpt: 'Practical strategies for managing your family's screen time effectively.',
+      excerpt: 'Practical strategies for managing your family\'s screen time effectively.',
       image: '/images/blog/screen-time.jpg',
       date: 'March 10, 2024',
       author: 'Michael Chen',
@@ -25,8 +25,8 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
-      title: 'Protecting Your Child's Online Privacy',
-      excerpt: 'Essential steps to safeguard your child's personal information online.',
+      title: 'Protecting Your Child\'s Online Privacy',
+      excerpt: 'Essential steps to safeguard your child\'s personal information online.',
       image: '/images/blog/privacy.jpg',
       date: 'March 5, 2024',
       author: 'Emma Rodriguez',
@@ -35,7 +35,7 @@ export default function BlogPage() {
     },
     {
       title: 'Social Media Safety Guide',
-      excerpt: 'A parent's guide to popular social media platforms and safety features.',
+      excerpt: 'A parent\'s guide to popular social media platforms and safety features.',
       image: '/images/blog/social-media.jpg',
       date: 'February 28, 2024',
       author: 'Dr. Sarah Johnson',

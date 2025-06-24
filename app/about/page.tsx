@@ -97,7 +97,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Safety & Privacy',
-                description: 'Protecting children's digital wellbeing is our top priority.',
+                description: 'Protecting children\'s digital wellbeing is our top priority.',
                 icon: '🛡️'
               },
               {
