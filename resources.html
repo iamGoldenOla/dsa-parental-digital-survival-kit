@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - DSA Parental Digital Survival Kit</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- Hotjar Tracking Code -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 3D Effect for Early Years Section */
+        #early-panel {
+            transform: perspective(1000px) rotateX(5deg) rotateY(2deg);
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 10px 20px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #early-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #007F7B, #4B5D3E);
+            opacity: 0.05;
+            z-index: -1;
+        }
+        
+        #early-panel:hover {
+            transform: perspective(1000px) rotateX(2deg) rotateY(1deg) translateY(-5px);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 15px 30px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+        
+        #early-panel .resource-list {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #early-panel .resource-list::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #007F7B, #4B5D3E);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        #early-panel h3 {
+            background: linear-gradient(135deg, #007F7B, #4B5D3E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        #early-panel h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #007F7B, #4B5D3E);
+            border-radius: 1px;
+        }
+        
+        #early-panel ul li {
+            transform: translateZ(10px);
+            transition: all 0.2s ease;
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 127, 123, 0.1);
+        }
+        
+        #early-panel ul li:hover {
+            transform: translateZ(20px) scale(1.02);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 16px rgba(0, 127, 123, 0.15);
+            border-color: rgba(0, 127, 123, 0.2);
+        }
+        
+        #early-panel ul li i {
+            color: #007F7B;
+            font-size: 1.2em;
+            margin-right: 10px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        #early-panel ul li a {
+            color: #007F7B;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        
+        #early-panel ul li a:hover {
+            color: #4B5D3E;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/BDM.webp" alt="BDM Logo" style="height:72px;width:auto;vertical-align:middle;">
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="position:relative;background: linear-gradient(to right, rgba(31,31,31,0.35), rgba(75,93,62,0.35)), url('images/resources.webp') top center/cover no-repeat fixed;">
+        <div class="container">
+            <div style="max-width:500px;text-align:left;color:#fff;z-index:2;margin-top:4rem;">
+                <h1 style="font-size:2.5rem;font-weight:bold;margin-bottom:1rem;color:#fff;">Digital Safety Resources</h1>
+                <p style="font-size:1.25rem;margin-bottom:2rem;color:#fff;">Curated tools, apps, and expert advice to help you navigate the digital world with confidence.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Age-Specific Resources -->
+    <section class="age-resources">
+        <div class="container">
+            <h2>Age-Specific Resources</h2>
+            <div class="age-tabs">
+                <button class="age-tab active" data-age="early">Early Years (Ages 2-5)</button>
+                <button class="age-tab" data-age="middle">Middle Years (Ages 6-12)</button>
+                <button class="age-tab" data-age="teen">Teen Years (Ages 13-18)</button>
+            </div>
+            
+            <div class="age-panel active" id="early-panel" style="background: var(--background-color); border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                <div class="resource-list" style="list-style: none; padding: 0;">
+                    <h3>Early Years (Ages 2-5)</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="resource-card" style="background: var(--background-color); backdrop-filter: blur(10px); border-radius: 15px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s, box-shadow 0.3s, transform 0.3s;">
+                            <i class="fas fa-mobile-alt" style="color: #FFD700; font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 0.8rem; border-radius: 50%; width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center; margin-right: 1rem;"></i>
+                            <a href="#">Educational Apps Guide</a> - Safe and educational apps for young children
+                        </li>
+                        <li class="resource-card" style="background: var(--background-color); backdrop-filter: blur(10px); border-radius: 15px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s, box-shadow 0.3s, transform 0.3s;">
+                            <i class="fas fa-clock" style="color: #FF6B6B; font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 0.8rem; border-radius: 50%; width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center; margin-right: 1rem;"></i>
+                            <a href="#">Screen Time Guidelines</a> - Age-appropriate screen time recommendations
+                        </li>
+                        <li class="resource-card" style="background: var(--background-color); backdrop-filter: blur(10px); border-radius: 15px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s, box-shadow 0.3s, transform 0.3s;">
+                            <i class="fas fa-shield-alt" style="color: #4ECDC4; font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 0.8rem; border-radius: 50%; width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center; margin-right: 1rem;"></i>
+                            <a href="#">Digital Safety Basics</a> - Simple rules for safe device use
+                        </li>
+                        <li class="resource-card" style="background: var(--background-color); backdrop-filter: blur(10px); border-radius: 15px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s, box-shadow 0.3s, transform 0.3s;">
+                            <i class="fas fa-book" style="color: #007F7B; font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 0.8rem; border-radius: 50%; width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center; margin-right: 1rem;"></i>
+                            <a href="#">Interactive Learning Tools</a> - Engaging educational content
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="age-panel" id="middle-panel">
+                <div class="resource-list">
+                    <h3>Middle Years (Ages 6-12)</h3>
+                    <ul>
+                        <li><i class="fab fa-facebook"></i> <a href="#">Social Media Safety</a> - Guide to safe social media use</li>
+                        <li><i class="fas fa-gamepad"></i> <a href="#">Online Gaming Safety</a> - Safe gaming practices and parental controls</li>
+                        <li><i class="fas fa-user-graduate"></i> <a href="#">Digital Citizenship</a> - Teaching responsible online behavior</li>
+                        <li><i class="fas fa-search"></i> <a href="#">Safe Search Tools</a> - Child-friendly search engines</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="age-panel" id="teen-panel">
+                <div class="resource-list">
+                    <h3>Teen Years (Ages 13-18)</h3>
+                    <ul>
+                        <li><i class="fas fa-user-secret"></i> <a href="#">Privacy Protection</a> - Managing online privacy and data</li>
+                        <li><i class="fas fa-ban"></i> <a href="#">Cyberbullying Prevention</a> - Recognizing and addressing cyberbullying</li>
+                        <li><i class="fas fa-footprint"></i> <a href="#">Digital Footprint</a> - Understanding online reputation</li>
+                        <li><i class="fas fa-credit-card"></i> <a href="#">Online Financial Safety</a> - Protecting against scams and fraud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Tools & Apps -->
+    <section class="tools">
+        <div class="container">
+            <h2>Recommended Tools & Apps</h2>
+            <div class="tools-grid">
+                <div class="tool-card" style="background:#4FC3F7;color:#fff;">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 style="color:#fff;">Parental Control Tools</h3>
+                    <ul style="color:#fff;">
+                        <li data-description="Google's parental control solution"><a href="#" style="color:#fff;">Family Link</a></li>
+                        <li data-description="Apple's device management tool"><a href="#" style="color:#fff;">Screen Time</a></li>
+                        <li data-description="Comprehensive parental control app"><a href="#" style="color:#fff;">Qustodio</a></li>
+                    </ul>
+                    <a href="#" class="tool-btn" style="color:#fff;">Learn More</a>
+                </div>
+                <div class="tool-card" style="background:#81C784;color:#fff;">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3 style="color:#fff;">Educational Apps</h3>
+                    <ul style="color:#fff;">
+                        <li data-description="Free educational content for children"><a href="#" style="color:#fff;">Khan Academy Kids</a></li>
+                        <li data-description="Language learning made fun"><a href="#" style="color:#fff;">Duolingo</a></li>
+                        <li data-description="Learn coding through games"><a href="#" style="color:#fff;">Scratch</a></li>
+                    </ul>
+                    <a href="#" class="tool-btn" style="color:#fff;">Learn More</a>
+                </div>
+                <div class="tool-card" style="background:#EC407A;color:#fff;">
+                    <i class="fas fa-lock"></i>
+                    <h3 style="color:#fff;">Safety Tools</h3>
+                    <ul style="color:#fff;">
+                        <li data-description="AI-powered online safety monitoring"><a href="#" style="color:#fff;">Bark</a></li>
+                        <li data-description="Content filtering and monitoring"><a href="#" style="color:#fff;">Net Nanny</a></li>
+                        <li data-description="Home network management"><a href="#" style="color:#fff;">Circle</a></li>
+                    </ul>
+                    <a href="#" class="tool-btn" style="color:#fff;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Articles -->
+    <section class="guides">
+        <div class="container">
+            <h2>Expert Articles</h2>
+            <div class="guides-grid">
+                <article class="guide-card">
+                    <div class="icon-bg" style="background:#4FC3F7;"><i class="fas fa-shield-alt" aria-label="Privacy"></i></div>
+                    <div class="guide-content" style="text-align:center;">
+                        <h3>Understanding Digital Privacy</h3>
+                        <p>Learn how to protect your family's digital privacy in an increasingly connected world.</p>
+                        <a href="#" class="tool-btn">Learn More</a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <div class="icon-bg" style="background:#81C784;"><i class="fas fa-clock" aria-label="Screen Time"></i></div>
+                    <div class="guide-content" style="text-align:center;">
+                        <h3>Managing Screen Time</h3>
+                        <p>Expert tips on creating healthy screen time habits for your family.</p>
+                        <a href="#" class="tool-btn">Learn More</a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <div class="icon-bg" style="background:#EC407A;"><i class="fas fa-users" aria-label="Social Media" style="color:#fff;"></i></div>
+                    <div class="guide-content" style="text-align:center;">
+                        <h3>Social Media Safety</h3>
+                        <p>A comprehensive guide to keeping your children safe on social media platforms.</p>
+                        <a href="#" class="tool-btn">Learn More</a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <div class="icon-bg" style="background:#FFD54F;"><i class="fas fa-user-graduate" aria-label="Digital Citizenship"></i></div>
+                    <div class="guide-content" style="text-align:center;">
+                        <h3>Digital Citizenship</h3>
+                        <p>Teaching your children to be responsible digital citizens.</p>
+                        <a href="#" class="tool-btn">Learn More</a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <div class="icon-bg" style="background:#FF8A65;"><i class="fas fa-child" aria-label="Resilience"></i></div>
+                    <div class="guide-content" style="text-align:center;">
+                        <h3>Raising Resilient Kids Online</h3>
+                        <p>Strategies for helping your children build confidence and cope with challenges in the digital world.</p>
+                        <a href="#" class="tool-btn">Learn More</a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <div class="icon-bg" style="background:#64B5F6;"><i class="fas fa-balance-scale" aria-label="Balance"></i></div>
+                    <div class="guide-content" style="text-align:center;">
+                        <h3>Balancing Tech and Family Time</h3>
+                        <p>Tips for creating healthy routines that prioritize family connection alongside technology use.</p>
+                        <a href="#" class="tool-btn">Learn More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>DSA Parent Kit</h3>
+                    <p>Empowering parents in the digital age.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="toolkit.html">Toolkit</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Age tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageTabs = document.querySelectorAll('.age-tab');
+            const agePanels = document.querySelectorAll('.age-panel');
+            
+            ageTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetAge = this.getAttribute('data-age');
+                    
+                    // Remove active class from all tabs and panels
+                    ageTabs.forEach(t => t.classList.remove('active'));
+                    agePanels.forEach(p => p.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding panel
+                    this.classList.add('active');
+                    document.getElementById(targetAge + '-panel').classList.add('active');
+                });
+            });
+
+            // Handle tool button clicks
+            const toolButtons = document.querySelectorAll('.tool-btn');
+            toolButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const toolName = this.closest('.tool-card').querySelector('h3').textContent;
+                    alert(`${toolName} information will be available soon! Detailed guides are coming in a future update.`);
+                });
+            });
+
+            // Handle guide link clicks
+            const guideLinks = document.querySelectorAll('.guide-link');
+            guideLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Expert article content will be available soon! Full articles are coming in a future update.');
+                });
+            });
+
+            // Handle resource link clicks
+            const resourceLinks = document.querySelectorAll('.resource-list a');
+            resourceLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Resource content will be available soon! Detailed resources are coming in a future update.');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

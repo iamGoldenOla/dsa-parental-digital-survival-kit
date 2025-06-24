@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Safety Guide for Parents - DSA Parent Kit</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .blog-main {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .blog-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .sidebar-widget {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar-widget h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .recent-article {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .recent-article img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .ad-space {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .blog-post-hero {
+            background: linear-gradient(to right, rgba(31,31,31,0.8), rgba(75,93,62,0.8)), url('../images/blog_article.webp') center center/cover no-repeat;
+            padding: 4rem 0;
+            color: white;
+        }
+        
+        .blog-post-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .blog-post-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .article-content {
+            padding: 2rem;
+        }
+        
+        .article-intro {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 5px;
+        }
+        
+        .article-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .article-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .info-box, .tip-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .tip-box {
+            background: #e8f5e8;
+            border-left-color: #28a745;
+        }
+        
+        .about-author {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .comments-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .comment-form textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .comment-form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .comment {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+        
+        .related-articles {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .related-article {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .related-article img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .related-article-content {
+            padding: 1rem;
+        }
+        
+        .category-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .category-list a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-post-header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .about-author {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/BDM.webp" alt="BDM Logo" style="height:72px;width:auto;vertical-align:middle;">
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../toolkit.html">Toolkit</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <header class="blog-post-hero">
+        <div class="container">
+            <div class="blog-post-header">
+                <div class="blog-category">
+                    <span class="category-badge">Digital Safety</span>
+                </div>
+                <h1>The Complete Social Media Safety Guide for Parents</h1>
+                <div class="blog-meta">
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Johnson">
+                        <span>By Dr. Sarah Johnson</span>
+                    </div>
+                    <div class="date">
+                        <i class="far fa-calendar"></i>
+                        <span>January 15, 2025</span>
+                    </div>
+                    <div class="read-time">
+                        <i class="far fa-clock"></i>
+                        <span>8 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <main class="blog-post-content">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <div class="blog-main">
+                    <article class="article-content">
+                        <div class="article-intro">
+                            <p>In today's digital age, social media has become an integral part of our children's lives. As parents, it's crucial to understand the risks and implement effective safety measures to protect our kids online.</p>
+                        </div>
+
+                        <section class="article-section">
+                            <h2>Understanding the Social Media Landscape</h2>
+                            <p>Social media platforms have evolved significantly over the past decade, offering new ways for children to connect, learn, and express themselves. However, with these opportunities come potential risks that parents need to be aware of.</p>
+                            
+                            <div class="info-box">
+                                <h3>Key Statistics</h3>
+                                <ul>
+                                    <li>81% of teens use social media daily</li>
+                                    <li>45% of teens report being online "almost constantly"</li>
+                                    <li>59% of teens have experienced cyberbullying</li>
+                                    <li>Only 39% of parents monitor their children's social media activity</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="article-section">
+                            <h2>Age-Appropriate Social Media Guidelines</h2>
+                            
+                            <h3>Ages 10-12: Introduction to Social Media</h3>
+                            <p>This is the age when many children first express interest in social media. It's important to start with educational conversations and supervised experiences.</p>
+                            
+                            <div class="tip-box">
+                                <h4>Parent Tips for Ages 10-12:</h4>
+                                <ul>
+                                    <li>Start with family-friendly platforms like YouTube Kids</li>
+                                    <li>Set up accounts together and review privacy settings</li>
+                                    <li>Establish clear rules about screen time</li>
+                                    <li>Monitor all online activity closely</li>
+                                    <li>Teach basic digital citizenship concepts</li>
+                                </ul>
+                            </div>
+
+                            <h3>Ages 13-15: Growing Independence</h3>
+                            <p>Teenagers in this age group are developing their social identities and seeking more independence online.</p>
+                            
+                            <div class="tip-box">
+                                <h4>Parent Tips for Ages 13-15:</h4>
+                                <ul>
+                                    <li>Allow more independence while maintaining oversight</li>
+                                    <li>Discuss privacy and personal information sharing</li>
+                                    <li>Set boundaries for acceptable content and behavior</li>
+                                    <li>Encourage critical thinking about online content</li>
+                                    <li>Regular check-ins about online experiences</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="article-section">
+                            <h2>Essential Privacy Settings for Popular Platforms</h2>
+                            
+                            <h3>Instagram Safety Settings</h3>
+                            <div class="info-box">
+                                <h4>Privacy Settings to Enable:</h4>
+                                <ul>
+                                    <li><strong>Private Account:</strong> Only approved followers can see posts</li>
+                                    <li><strong>Story Privacy:</strong> Control who can see your stories</li>
+                                    <li><strong>Comment Controls:</strong> Filter and restrict comments</li>
+                                    <li><strong>Location Services:</strong> Disable location sharing</li>
+                                    <li><strong>Two-Factor Authentication:</strong> Add extra security</li>
+                                </ul>
+                            </div>
+
+                            <h3>TikTok Safety Features</h3>
+                            <div class="info-box">
+                                <h4>Key Safety Features:</h4>
+                                <ul>
+                                    <li><strong>Family Pairing:</strong> Link parent and child accounts</li>
+                                    <li><strong>Screen Time Management:</strong> Set daily limits</li>
+                                    <li><strong>Restricted Mode:</strong> Filter inappropriate content</li>
+                                    <li><strong>Comment Controls:</strong> Manage who can comment</li>
+                                    <li><strong>Direct Messages:</strong> Control messaging permissions</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="article-section">
+                            <h2>Conclusion</h2>
+                            <p>Navigating social media safety as a parent requires ongoing education, open communication, and adaptive strategies. By staying informed about the latest platforms and risks, maintaining open dialogue with your children, and implementing appropriate safety measures, you can help your family enjoy the benefits of social media while minimizing the risks.</p>
+                        </section>
+                    </article>
+
+                    <!-- About the Author -->
+                    <div class="about-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Johnson" class="author-avatar">
+                        <div class="author-info">
+                            <h3>About Dr. Sarah Johnson</h3>
+                            <p class="author-bio">Dr. Sarah Johnson is a child psychologist and digital safety expert with over 15 years of experience working with families. She specializes in helping parents navigate the challenges of raising children in the digital age and has published numerous articles on child development and online safety.</p>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h3>Comments (3)</h3>
+                        
+                        <form class="comment-form">
+                            <textarea placeholder="Share your thoughts on this article..."></textarea>
+                            <button type="submit">Post Comment</button>
+                        </form>
+
+                        <div class="comments">
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <span class="comment-author">Maria Rodriguez</span>
+                                    <span class="comment-date">January 16, 2025</span>
+                                </div>
+                                <p>This article is exactly what I needed! My 13-year-old just got Instagram and I've been worried about how to keep her safe. The age-specific tips are so helpful.</p>
+                            </div>
+                            
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <span class="comment-author">David Chen</span>
+                                    <span class="comment-date">January 15, 2025</span>
+                                </div>
+                                <p>Great resource! I especially appreciate the section on recognizing cyberbullying warning signs. It's something every parent should be aware of.</p>
+                            </div>
+                            
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <span class="comment-author">Lisa Thompson</span>
+                                    <span class="comment-date">January 15, 2025</span>
+                                </div>
+                                <p>The privacy settings guides are fantastic. I've already implemented several of these with my kids' accounts. Thank you for the practical advice!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="related-articles">
+                        <h3>Related Articles</h3>
+                        <div class="related-grid">
+                            <article class="related-article">
+                                <img src="https://images.pexels.com/photos/4262425/pexels-photo-4262425.jpeg?auto=compress&w=600&q=80" alt="Screen time management">
+                                <div class="related-article-content">
+                                    <h4><a href="screen-time-management.html">Managing Screen Time: A Parent's Guide</a></h4>
+                                    <div class="date">January 12, 2025</div>
+                                </div>
+                            </article>
+                            
+                            <article class="related-article">
+                                <img src="https://images.pexels.com/photos/4262427/pexels-photo-4262427.jpeg?auto=compress&w=600&q=80" alt="Cyberbullying prevention">
+                                <div class="related-article-content">
+                                    <h4><a href="cyberbullying-prevention.html">Recognizing and Preventing Cyberbullying</a></h4>
+                                    <div class="date">January 3, 2025</div>
+                                </div>
+                            </article>
+                            
+                            <article class="related-article">
+                                <img src="https://images.pexels.com/photos/1682497/pexels-photo-1682497.jpeg?auto=compress&w=600&q=80" alt="Digital citizenship">
+                                <div class="related-article-content">
+                                    <h4><a href="online-privacy-guide.html">Teaching Digital Citizenship to Your Children</a></h4>
+                                    <div class="date">January 10, 2025</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Recent Articles Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Recent Articles</h3>
+                        <div class="recent-article">
+                            <img src="https://images.pexels.com/photos/4262425/pexels-photo-4262425.jpeg?auto=compress&w=600&q=80" alt="Screen time management">
+                            <div class="recent-article-content">
+                                <h4><a href="screen-time-management.html">Managing Screen Time</a></h4>
+                                <div class="date">Jan 12, 2025</div>
+                            </div>
+                        </div>
+                        <div class="recent-article">
+                            <img src="https://images.pexels.com/photos/1682497/pexels-photo-1682497.jpeg?auto=compress&w=600&q=80" alt="Digital citizenship">
+                            <div class="recent-article-content">
+                                <h4><a href="online-privacy-guide.html">Teaching Digital Citizenship</a></h4>
+                                <div class="date">Jan 10, 2025</div>
+                            </div>
+                        </div>
+                        <div class="recent-article">
+                            <img src="https://images.pexels.com/photos/4262427/pexels-photo-4262427.jpeg?auto=compress&w=600&q=80" alt="Cyberbullying prevention">
+                            <div class="recent-article-content">
+                                <h4><a href="cyberbullying-prevention.html">Preventing Cyberbullying</a></h4>
+                                <div class="date">Jan 3, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="../blog.html?category=safety">Digital Safety <span>(8)</span></a></li>
+                            <li><a href="../blog.html?category=parenting">Parenting Tips <span>(12)</span></a></li>
+                            <li><a href="../blog.html?category=technology">Technology <span>(6)</span></a></li>
+                            <li><a href="../blog.html?category=education">Education <span>(9)</span></a></li>
+                            <li><a href="../blog.html?category=mental-health">Mental Health <span>(5)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Advertisement Space 1 -->
+                    <div class="sidebar-widget">
+                        <div class="ad-space">
+                            <div>
+                                <i class="fas fa-ad" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                                <h4>Advertisement Space</h4>
+                                <p>Perfect for promoting your digital safety products or services</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-widget">
+                        <h3>Stay Updated</h3>
+                        <p>Get the latest digital parenting tips delivered to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Advertisement Space 2 -->
+                    <div class="sidebar-widget">
+                        <div class="ad-space">
+                            <div>
+                                <i class="fas fa-shield-alt" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                                <h4>Parental Control Tools</h4>
+                                <p>Sponsored content area for safety software and tools</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Tags -->
+                    <div class="sidebar-widget">
+                        <h3>Popular Tags</h3>
+                        <div class="tags">
+                            <a href="#" class="tag">#SocialMedia</a>
+                            <a href="#" class="tag">#Cyberbullying</a>
+                            <a href="#" class="tag">#ScreenTime</a>
+                            <a href="#" class="tag">#Privacy</a>
+                            <a href="#" class="tag">#TeenSafety</a>
+                            <a href="#" class="tag">#DigitalParenting</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>DSA Parent Kit</h3>
+                    <p>Empowering parents in the digital age.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../toolkit.html">Toolkit</a></li>
+                        <li><a href="../resources.html">Resources</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/newsletter.js"></script>
+</body>
+</html> 

@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #007F7B; /* Sea Green */
+    --background-color: #FAF9F6; /* White */
+    --support-color: #4B5D3E; /* Army Green */
+    --text-color: #1F1F1F; /* Rich Black */
+    --white: #FAF9F6;
+    --gray-light: #E5E7EB;
+    --gray: #6B7280;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  html.dark body {
+    color: #FAF9F6;
+    background-color: #181A1B;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+  }
+  html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+    color: #FAF9F6;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-text px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .navbar {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  html.dark .navbar {
+    background-color: #23272A;
+  }
+
+  .logo a {
+    color: var(--primary-color);
+    font-size: 72px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--primary-color);
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    background-color: var(--support-color);
+  }
+
+  .features, .toolkit-features, .testimonials, .newsletter, .footer, .impact, .values, .cta, .quick-access {
+    background-color: var(--background-color);
+  }
+
+  .features h2, .toolkit-features h2, .testimonials h2, .newsletter h2, .footer-section h3, .footer-section h4, .impact h2, .values h2, .cta h2 {
+    color: var(--text-color);
+  }
+
+  .feature-card, .toolkit-card, .testimonial, .mission-card, .vision-card, .value-card, .team-member {
+    background-color: var(--white);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  html.dark .feature-card, html.dark .toolkit-card, html.dark .testimonial, html.dark .mission-card, html.dark .vision-card, html.dark .value-card, html.dark .team-member {
+    background-color: #23272A;
+    color: #FAF9F6;
+  }
+
+  .feature-card i, .toolkit-card i, .value-card i, .mission-card i, .vision-card i {
+    color: var(--primary-color);
+  }
+
+  .footer {
+    background-color: #4B5D3E !important;
+    color: #FAF9F6 !important;
+  }
+  html.dark .footer {
+    background-color: #181A1B !important;
+    color: #FAF9F6 !important;
+  }
+
+  .footer a, .footer-section a {
+    color: #FAF9F6 !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover, .footer-section a:hover {
+    color: #007F7B !important;
+  }
+
+  .footer-bottom, .footer hr, .footer .divider {
+    border-top: 1px solid rgba(31, 31, 31, 0.2) !important;
+  }
+
+  .divider, hr {
+    border-color: var(--support-color);
+  }
+
+  .tag, .badge {
+    background-color: var(--support-color);
+    color: var(--white);
+  }
+} 

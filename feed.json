@@ -1,0 +1,65 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "DSA Parent Kit Blog",
+  "home_page_url": "https://dsaparentkit.com/blog.html",
+  "feed_url": "https://dsaparentkit.com/feed.json",
+  "description": "Latest digital parenting articles and resources from DSA Parent Kit.",
+  "items": [
+    {
+      "id": "screen-time-management",
+      "title": "Screen Time Management: Finding the Right Balance",
+      "url": "https://dsaparentkit.com/blog/screen-time-management.html",
+      "content_text": "Practical tips to help you set healthy boundaries and encourage balanced digital habits for your family.",
+      "date_published": "2025-02-10T09:00:00+00:00",
+      "author": { "name": "Dr. Funmilayo Adeyemi" }
+    },
+    {
+      "id": "online-privacy-guide",
+      "title": "Teaching Digital Citizenship to Your Children",
+      "url": "https://dsaparentkit.com/blog/online-privacy-guide.html",
+      "content_text": "Help your children become responsible digital citizens with these essential lessons about online behavior and ethics.",
+      "date_published": "2025-01-10T09:00:00+00:00",
+      "author": { "name": "Mrs. Chidinma Okafor" }
+    },
+    {
+      "id": "parental-controls-guide",
+      "title": "Setting Up Effective Parental Controls",
+      "url": "https://dsaparentkit.com/blog/parental-controls-guide.html",
+      "content_text": "A comprehensive guide to configuring parental controls across different devices and platforms to keep your children safe online.",
+      "date_published": "2025-02-12T09:00:00+00:00",
+      "author": { "name": "Mrs. Ifeoma Nwosu" }
+    },
+    {
+      "id": "best-educational-apps",
+      "title": "Best Educational Apps for Different Age Groups",
+      "url": "https://dsaparentkit.com/blog/best-educational-apps.html",
+      "content_text": "Curated recommendations for educational apps that can enhance your child's learning while maintaining safety standards.",
+      "date_published": "2025-02-14T09:00:00+00:00",
+      "author": { "name": "Dr. Kemi Olatunji" }
+    },
+    {
+      "id": "cyberbullying-prevention",
+      "title": "Recognizing and Preventing Cyberbullying",
+      "url": "https://dsaparentkit.com/blog/cyberbullying-prevention.html",
+      "content_text": "Learn the warning signs of cyberbullying and how to support your child if they become a target or witness to online harassment.",
+      "date_published": "2025-01-03T09:00:00+00:00",
+      "author": { "name": "Mr. Tolu Adebayo" }
+    },
+    {
+      "id": "digital-safety-conversations",
+      "title": "Starting Digital Safety Conversations with Your Family",
+      "url": "https://dsaparentkit.com/blog/digital-safety-conversations.html",
+      "content_text": "Tips for initiating meaningful discussions about online safety that engage your children and build trust.",
+      "date_published": "2025-02-16T09:00:00+00:00",
+      "author": { "name": "Mr. Emeka Uzo" }
+    },
+    {
+      "id": "social-media-safety-guide",
+      "title": "The Complete Social Media Safety Guide for Parents",
+      "url": "https://dsaparentkit.com/blog/social-media-safety-guide.html",
+      "content_text": "Comprehensive guide for parents to help children navigate social media safely and responsibly.",
+      "date_published": "2025-01-15T09:00:00+00:00",
+      "author": { "name": "DSA Editorial Team" }
+    }
+  ]
+} 

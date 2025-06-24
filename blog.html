@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DSA Parent Kit</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- Hotjar Tracking Code -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/BDM.webp" alt="BDM Logo" style="height:72px;width:auto;vertical-align:middle;">
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Hero Section -->
+    <header class="hero" style="position:relative;background: linear-gradient(to right, rgba(31,31,31,0.35), rgba(75,93,62,0.35)), url('images/blog_page.webp') top center/cover no-repeat fixed;">
+        <div class="container">
+            <div style="max-width:500px;text-align:left;color:#fff;z-index:2;margin-top:4rem;">
+                <h1 style="font-size:2.5rem;font-weight:bold;margin-bottom:1rem;color:#fff;">Digital Parenting Blog</h1>
+                <p style="font-size:1.25rem;margin-bottom:2rem;color:#fff;">Expert insights, tips, and stories to help you navigate the digital world with confidence</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Posts</button>
+                <button class="category-tab" data-category="safety">Digital Safety</button>
+                <button class="category-tab" data-category="parenting">Parenting Tips</button>
+                <button class="category-tab" data-category="technology">Technology</button>
+                <button class="category-tab" data-category="education">Education</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-card" style="background: var(--background-color);">
+                <div class="featured-image">
+                    <div style="position:relative;width:100%;height:0;padding-bottom:56.25%;background:#000;border-radius:15px;overflow:hidden;margin-top:2rem;">
+                        <iframe 
+                            src="https://www.youtube.com/embed/8o06djqW-oI" 
+                            title="Digital Parenting Tips" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:15px;">
+                        </iframe>
+                    </div>
+                    <div class="featured-badge">Featured</div>
+                </div>
+                <div class="featured-content">
+                    <div class="article-meta">
+                        <span class="category">Digital Safety</span>
+                        <span class="date">January 15, 2025</span>
+                    </div>
+                    <h2>The Complete Guide to Social Media Safety for Teens</h2>
+                    <p>Learn essential strategies to help your teenagers navigate social media safely, including privacy settings, content sharing guidelines, and how to recognize potential risks.</p>
+                    <a href="blog/social-media-safety-guide.html" class="read-more-btn">Read Full Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid">
+                <!-- Article 1 -->
+                <article class="blog-card" data-category="safety">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/4262425/pexels-photo-4262425.jpeg?auto=compress&w=600&q=80" alt="Mother and daughter using tablet together">
+                    </div>
+                    <div class="blog-content">
+                        <div class="article-meta">
+                            <span class="category">Digital Safety</span>
+                            <span class="date">January 12, 2025</span>
+                        </div>
+                        <h3>Managing Screen Time: A Parent's Guide</h3>
+                        <p>Discover practical strategies for setting healthy screen time limits and creating a balanced digital lifestyle for your family.</p>
+                        <a href="blog/screen-time-management.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card" data-category="parenting">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/1682497/pexels-photo-1682497.jpeg?auto=compress&w=600&q=80" alt="Father and son looking at laptop">
+                    </div>
+                    <div class="blog-content">
+                        <div class="article-meta">
+                            <span class="category">Parenting Tips</span>
+                            <span class="date">January 10, 2025</span>
+                        </div>
+                        <h3>Teaching Digital Citizenship to Your Children</h3>
+                        <p>Help your children become responsible digital citizens with these essential lessons about online behavior and ethics.</p>
+                        <a href="blog/online-privacy-guide.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card" data-category="technology">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/4473864/pexels-photo-4473864.jpeg?auto=compress&w=600&q=80" alt="Mother and son using computer">
+                    </div>
+                    <div class="blog-content">
+                        <div class="article-meta">
+                            <span class="category">Technology</span>
+                            <span class="date">January 8, 2025</span>
+                        </div>
+                        <h3>Setting Up Effective Parental Controls</h3>
+                        <p>A comprehensive guide to configuring parental controls across different devices and platforms to keep your children safe online.</p>
+                        <a href="blog/parental-controls-guide.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card" data-category="education">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/4260325/pexels-photo-4260325.jpeg?auto=compress&w=600&q=80" alt="Family learning together on laptop">
+                    </div>
+                    <div class="blog-content">
+                        <div class="article-meta">
+                            <span class="category">Education</span>
+                            <span class="date">January 5, 2025</span>
+                        </div>
+                        <h3>Best Educational Apps for Different Age Groups</h3>
+                        <p>Curated recommendations for educational apps that can enhance your child's learning while maintaining safety standards.</p>
+                        <a href="blog/best-educational-apps.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card" data-category="safety">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/4262427/pexels-photo-4262427.jpeg?auto=compress&w=600&q=80" alt="Mother comforting daughter on couch">
+                    </div>
+                    <div class="blog-content">
+                        <div class="article-meta">
+                            <span class="category">Digital Safety</span>
+                            <span class="date">January 3, 2025</span>
+                        </div>
+                        <h3>Recognizing and Preventing Cyberbullying</h3>
+                        <p>Learn the warning signs of cyberbullying and how to support your child if they become a target or witness to online harassment.</p>
+                        <a href="blog/cyberbullying-prevention.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card" data-category="parenting">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80" alt="Parents and children having a conversation">
+                    </div>
+                    <div class="blog-content">
+                        <div class="article-meta">
+                            <span class="category">Parenting Tips</span>
+                            <span class="date">December 30, 2024</span>
+                        </div>
+                        <h3>Starting Digital Safety Conversations with Your Family</h3>
+                        <p>Tips for initiating meaningful discussions about online safety that engage your children and build trust.</p>
+                        <a href="blog/digital-safety-conversations.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated with Our Latest Articles</h2>
+            <p>Subscribe to our newsletter for weekly digital parenting tips and the latest blog posts.</p>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+            <div id="newsletter-message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>DSA Parent Kit</h3>
+                    <p>Empowering parents in the digital age.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="toolkit.html">Toolkit</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script src="js/blog-features.js"></script>
+    <script>
+        // Blog category filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    // Remove active class from all tabs
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Filter blog cards
+                    blogCards.forEach(card => {
+                        if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Handle "Read More" button clicks
+            const readMoreLinks = document.querySelectorAll('.read-more, .read-more-btn');
+            readMoreLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Only prevent default and show alert if href is exactly '#'
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        alert('This blog post is coming soon! We\'re working hard to bring you comprehensive articles on digital parenting. Stay tuned for updates!');
+                    }
+                    // Otherwise, allow navigation to the real article (do not preventDefault)
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

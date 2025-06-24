@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Safety Toolkit - DSA Parent Kit</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- Hotjar Tracking Code -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/BDM.webp" alt="BDM Logo" style="height:72px;width:auto;vertical-align:middle;">
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="toolkit.html" class="active">Toolkit</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Toolkit Hero Section -->
+    <header class="hero" style="position:relative;background: linear-gradient(to right, rgba(31,31,31,0.35), rgba(75,93,62,0.35)), url('images/toolkit_about.webp') top center/cover no-repeat fixed;">
+        <div class="container">
+            <div style="max-width:500px;text-align:left;color:#fff;z-index:2;margin-top:4rem;">
+                <h1 style="font-size:2.5rem;font-weight:bold;margin-bottom:1rem;color:#fff;">Digital Safety Toolkit</h1>
+                <p style="font-size:1.25rem;margin-bottom:2rem;color:#fff;">Comprehensive resources to help you protect your children online</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Access Section -->
+    <section class="quick-access">
+        <div class="container">
+            <div class="quick-access-grid">
+                <a href="#guides" class="quick-access-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Guides</h3>
+                    <p>Comprehensive digital safety guides</p>
+                </a>
+                <a href="#checklists" class="quick-access-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Checklists</h3>
+                    <p>Actionable safety checklists</p>
+                </a>
+                <a href="#tools" class="quick-access-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools</h3>
+                    <p>Interactive safety tools</p>
+                </a>
+                <a href="#resources" class="quick-access-card">
+                    <i class="fas fa-link"></i>
+                    <h3>Resources</h3>
+                    <p>Curated external resources</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLKIT COMPONENTS LIST -->
+    <section class="toolkit-components-list" style="background: var(--background-color); padding: 2.5rem 0;">
+        <div class="container">
+            <h2 style="color: #007F7B; font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">What's Inside the Toolkit?</h2>
+            <div class="toolkit-grid">
+                <div class="toolkit-card">
+                    <img src="images/about-us.webp" alt="Welcome Letter & Device Agreements" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Welcome Letter & Device Agreements</h3>
+                        <p>Kickstart your digital safety journey with a warm welcome and customizable device agreements for your family.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="images/hero-section.webp" alt="Screen Time Guide" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Screen Time Guide</h3>
+                        <p>Practical tips and expert-backed recommendations to help you manage healthy screen time for every age group.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="images/blog_article.webp" alt="Social Media Safety Check" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Social Media Safety Check</h3>
+                        <p>Step-by-step checklists to keep your child's social media experience safe, private, and positive.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="images/toolkit_about.webp" alt="Digital Memory Verse Cards" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Digital Memory Verse Cards</h3>
+                        <p>Printable cards with inspiring verses to encourage positive digital habits and values.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="images/resources.webp" alt="Offline Bonding Activities" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Offline Bonding Activities</h3>
+                        <p>Fun, screen-free activities for families—choose from neutral or faith-based options to strengthen your bond.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <div style="width:100%;height:160px;overflow:hidden;border-radius:12px 12px 0 0;background:#000;display:flex;align-items:center;justify-content:center;">
+                        <iframe width="100%" height="160" src="https://www.youtube.com/embed/gP_xk2oVzTU" title="Spotting Online Red Flags - A Parent's Guide" frameborder="0" allowfullscreen style="border-radius:12px 12px 0 0;"></iframe>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Spotting Online Red Flags</h3>
+                        <p>Watch this quick video guide to help parents recognize and respond to online dangers and warning signs.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="images/contact_us.webp" alt="Conversation Starters" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Conversation Starters</h3>
+                        <p>Engaging prompts to spark meaningful discussions about digital safety with your children.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="images/service_page.webp" alt="Mindfulness and Emotional Check-Ins" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Mindfulness and Emotional Check-Ins</h3>
+                        <p>Simple exercises and check-in tools to support your child's emotional well-being in a digital world.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="images/blog_page.webp" alt="Digital Detox Challenge" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>Digital Detox Challenge</h3>
+                        <p>A 7-day challenge to help your family unplug, reconnect, and rediscover life beyond screens.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Group of parents and children praying together" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>BONUS: Faith-Based Prayers</h3>
+                        <p>Special prayers to cover your children with protection and wisdom as they explore the digital world.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="30-Day Parenting Devotional Book" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>BONUS: 30-Day Parenting Devotional</h3>
+                        <p>Daily encouragement and reflection for parents navigating the challenges of raising digital natives.</p>
+                    </div>
+                </div>
+                <div class="toolkit-card">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Family Digital Wellness Planner - Family planning together" style="width:100%;height:160px;object-fit:cover;border-radius:12px 12px 0 0;">
+                    <div class="guide-content">
+                        <h3>BONUS: Family Digital Wellness Planner</h3>
+                        <p>A printable planner to help your family set digital goals, track habits, and celebrate progress together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END TOOLKIT COMPONENTS LIST -->
+
+    <!-- Guides Section -->
+    <section id="guides" class="guides">
+        <div class="container">
+            <h2>Comprehensive Guides</h2>
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <img src="https://images.pexels.com/photos/4050287/pexels-photo-4050287.jpeg?auto=compress&w=400&q=80" alt="Mother reading a book on safety to her child - Social Media Safety">
+                    <div class="guide-content">
+                        <h3>Social Media Safety</h3>
+                        <p>Learn how to help your children navigate social media platforms safely and responsibly.</p>
+                        <ul class="guide-topics">
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Platform-specific safety settings</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Privacy management</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Content sharing guidelines</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Cyberbullying prevention</li>
+                        </ul>
+                        <a href="#" class="guide-link">Read Guide</a>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Building Healthy Digital Habits - Woman and child talking" style="width:100%;height:250px;object-fit:cover;">
+                    <div class="guide-content">
+                        <h3>Building Healthy Digital Habits</h3>
+                        <p>Help your children develop balanced routines and positive screen habits for lifelong well-being.</p>
+                        <ul class="guide-topics">
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Setting screen time boundaries</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Encouraging offline activities</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Modeling healthy tech use</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Creating family tech agreements</li>
+                        </ul>
+                        <a href="#" class="guide-link">Read Guide</a>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=400&q=80" alt="Family Communication Online - Family talking together" style="width:100%;height:250px;object-fit:cover;">
+                    <div class="guide-content">
+                        <h3>Family Communication Online</h3>
+                        <p>Foster open, honest conversations about digital life and keep your family connected and safe.</p>
+                        <ul class="guide-topics">
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Talking about online experiences</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Setting family communication rules</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Recognizing digital misunderstandings</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Supporting each other online</li>
+                        </ul>
+                        <a href="#" class="guide-link">Read Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklists Section -->
+    <section id="checklists" class="guides">
+        <div class="container">
+            <h2>Safety Checklists</h2>
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <img src="https://images.pexels.com/photos/4050287/pexels-photo-4050287.jpeg?auto=compress&w=400&q=80" alt="Mother checking device settings - Device Safety Checklist">
+                    <div class="guide-content">
+                        <h3>Device Safety Checklist</h3>
+                        <p>Essential steps to secure your children's devices and protect their digital safety.</p>
+                        <ul class="guide-topics">
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Enable device passcode/fingerprint lock</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Set up parental controls</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Install security software</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Enable automatic updates</li>
+                        </ul>
+                        <a href="#" class="guide-link">Download</a>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <img src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&w=400&q=80" alt="Family discussing online safety - Online Safety Assessment">
+                    <div class="guide-content">
+                        <h3>Online Safety Assessment</h3>
+                        <p>Evaluate your family's digital safety practices and identify areas for improvement.</p>
+                        <ul class="guide-topics">
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Privacy settings review</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Screen time evaluation</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Communication practices</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Emergency response plan</li>
+                        </ul>
+                        <a href="#" class="guide-link">Download</a>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&w=400&q=80" alt="African woman with laptop - Digital Communication Guide">
+                    <div class="guide-content">
+                        <h3>Digital Communication Guide</h3>
+                        <p>Guidelines for safe online communication and building healthy digital habits.</p>
+                        <ul class="guide-topics">
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Safe messaging practices</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Social media guidelines</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Cyberbullying prevention</li>
+                            <li><i class="fas fa-check-circle" style="color: #007F7B; margin-right: 8px;"></i>Digital etiquette rules</li>
+                        </ul>
+                        <a href="#" class="guide-link">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2>Interactive Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Screen Time Calculator</h3>
+                    <p>Calculate and manage appropriate screen time for your children.</p>
+                    <button class="tool-btn" onclick="openTool('screen-time')">Open Tool</button>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Conversation Starters</h3>
+                    <p>Generate age-appropriate topics to discuss digital safety.</p>
+                    <button class="tool-btn" onclick="openTool('conversation')">Open Tool</button>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Safety Quiz</h3>
+                    <p>Test your knowledge of digital safety practices.</p>
+                    <button class="tool-btn" onclick="openTool('quiz')">Open Tool</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age-Specific Resources -->
+    <section id="resources" class="age-resources">
+        <div class="container">
+            <h2>Age-Specific Resources</h2>
+            <div class="age-tabs">
+                <button class="age-tab active" data-age="young">Young Children (5-8)</button>
+                <button class="age-tab" data-age="tween">Tweens (9-12)</button>
+                <button class="age-tab" data-age="teen">Teens (13-17)</button>
+            </div>
+            <div class="age-content">
+                <div class="age-panel active" id="young" style="background: var(--background-color); border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3 style="color: #1F1F1F; font-size: 2rem; margin-bottom: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.08);">Resources for Young Children</h3>
+                            <ul class="resource-list" style="list-style: none; padding: 0;">
+                                <li class="resource-card" style="background: var(--background-color); backdrop-filter: blur(10px); border-radius: 15px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s, box-shadow 0.3s, transform 0.3s;">
+                                    <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <i class="fas fa-video" style="color: #FFD700; font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 0.8rem; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"></i>
+                                        <div>
+                                            <h4 style="color: #1F1F1F; margin: 0 0 0.5rem 0; font-size: 1.2rem;">Educational Videos</h4>
+                                            <p style="color: #1F1F1F; margin: 0; line-height: 1.5;">Age-appropriate videos about online safety</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="resource-card" style="background: var(--background-color); backdrop-filter: blur(10px); border-radius: 15px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s, box-shadow 0.3s, transform 0.3s;">
+                                    <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <i class="fas fa-gamepad" style="color: #FF6B6B; font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 0.8rem; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"></i>
+                                        <div>
+                                            <h4 style="color: #1F1F1F; margin: 0 0 0.5rem 0; font-size: 1.2rem;">Safe Games</h4>
+                                            <p style="color: #1F1F1F; margin: 0; line-height: 1.5;">Curated list of child-friendly games</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="resource-card" style="background: var(--background-color); backdrop-filter: blur(10px); border-radius: 15px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: background 0.3s, box-shadow 0.3s, transform 0.3s;">
+                                    <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <i class="fas fa-book-reader" style="color: #4ECDC4; font-size: 1.5rem; background: rgba(255,255,255,0.2); padding: 0.8rem; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"></i>
+                                        <div>
+                                            <h4 style="color: #1F1F1F; margin: 0 0 0.5rem 0; font-size: 1.2rem;">Parent Guides</h4>
+                                            <p style="color: #1F1F1F; margin: 0; line-height: 1.5;">Tips for introducing technology safely</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; background: #000; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/qtJNRxMRuPE" 
+                                    title="Internet Safety for Kids - Young Children" 
+                                    frameborder="0" 
+                                    allowfullscreen 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                </iframe>
+                            </div>
+                            <p style="text-align: center; margin-top: 1rem; font-size: 1rem; color: rgba(255,255,255,0.9); font-weight: 500;">
+                                Watch: "Internet Safety for Kids" (YouTube)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Other age panels will be shown/hidden via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="toolkit-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I set up parental controls?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide step-by-step guides for setting up parental controls on various devices and platforms. Visit our Device Safety Guide for detailed instructions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is appropriate screen time for different ages?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Screen time recommendations vary by age: 2-5 years (1 hour), 6-12 years (2 hours), 13-17 years (3 hours). Use our Screen Time Calculator for personalized recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I monitor my child's online activities?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Use a combination of parental controls, open communication, and regular check-ins. Our Digital Safety Assessment can help you evaluate your current monitoring strategies.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What should I do if my child encounters cyberbullying?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Stay calm, listen to your child, document the incidents, report to the platform, and contact school authorities if needed. Our Communication Guide provides detailed steps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Need More Help?</h2>
+            <p>Our team of experts is here to support you on your digital parenting journey.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">Contact Us</a>
+                <a href="resources.html" class="cta-button secondary">More Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>DSA Parent Kit</h3>
+                    <p>Empowering parents in the digital age.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="toolkit.html">Toolkit</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/toolkit.js"></script>
+    <script>
+        // Handle guide link clicks - Open modal with actual content
+        document.addEventListener('DOMContentLoaded', function() {
+            const guideLinks = document.querySelectorAll('.guide-link');
+            guideLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const guideCard = this.closest('.guide-card');
+                    const guideTitle = guideCard.querySelector('h3').textContent;
+                    const guideDescription = guideCard.querySelector('p').textContent;
+                    
+                    // Check if this is a checklist (contains "Download" in the link text)
+                    if (this.textContent.includes('Download')) {
+                        downloadChecklist(guideTitle);
+                    } else {
+                        openGuideModal(guideTitle, guideDescription);
+                    }
+                });
+            });
+
+            // Handle tool button clicks - Open interactive tools
+            const toolButtons = document.querySelectorAll('.tool-btn');
+            toolButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const toolCard = this.closest('.tool-card');
+                    const toolTitle = toolCard.querySelector('h3').textContent;
+                    openInteractiveTool(toolTitle);
+                });
+            });
+
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const isActive = faqItem.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        faqItem.classList.add('active');
+                    }
+                });
+            });
+
+            // Age tab functionality
+            const ageTabs = document.querySelectorAll('.age-tab');
+            const agePanels = document.querySelectorAll('.age-panel');
+            
+            ageTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetAge = this.getAttribute('data-age');
+                    
+                    // Remove active class from all tabs and panels
+                    ageTabs.forEach(t => t.classList.remove('active'));
+                    agePanels.forEach(p => p.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding panel
+                    this.classList.add('active');
+                    document.getElementById(targetAge).classList.add('active');
+                });
+            });
+        });
+
+        // Function to open guide modal with actual content
+        function openGuideModal(title, description) {
+            const modal = document.createElement('div');
+            modal.className = 'guide-modal';
+            modal.innerHTML = `
+                <div class="modal-overlay">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>${title}</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="modal-description">${description}</p>
+                            <div class="guide-sections">
+                                ${getGuideContent(title)}
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="modal-btn secondary" onclick="closeModal()">Close</button>
+                            <button class="modal-btn primary" onclick="downloadGuide('${title}')">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add modal styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .guide-modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 10000;
+                    animation: fadeIn 0.3s ease;
+                }
+                .modal-overlay {
+                    background: rgba(0,0,0,0.7);
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 20px;
+                }
+                .modal-content {
+                    background: white;
+                    border-radius: 20px;
+                    max-width: 800px;
+                    width: 100%;
+                    max-height: 90vh;
+                    overflow-y: auto;
+                    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                    animation: slideUp 0.3s ease;
+                }
+                .modal-header {
+                    padding: 2rem 2rem 1rem;
+                    border-bottom: 1px solid #eee;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .modal-header h2 {
+                    color: #2c3e50;
+                    margin: 0;
+                    font-size: 1.8rem;
+                }
+                .modal-close {
+                    background: none;
+                    border: none;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: #999;
+                    padding: 0;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                }
+                .modal-close:hover {
+                    background: #f0f0f0;
+                    color: #333;
+                }
+                .modal-body {
+                    padding: 2rem;
+                }
+                .modal-description {
+                    color: #666;
+                    font-size: 1.1rem;
+                    line-height: 1.6;
+                    margin-bottom: 2rem;
+                    padding: 1rem;
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                    border-left: 4px solid #007F7B;
+                }
+                .guide-sections {
+                    display: grid;
+                    gap: 1.5rem;
+                }
+                .guide-section {
+                    background: #f8f9fa;
+                    padding: 1.5rem;
+                    border-radius: 15px;
+                    border: 1px solid #e9ecef;
+                }
+                .guide-section h3 {
+                    color: #007F7B;
+                    margin-bottom: 1rem;
+                    font-size: 1.3rem;
+                }
+                .guide-section ul {
+                    margin: 0;
+                    padding-left: 1.5rem;
+                }
+                .guide-section li {
+                    margin-bottom: 0.5rem;
+                    line-height: 1.5;
+                    color: #555;
+                }
+                .modal-footer {
+                    padding: 1rem 2rem 2rem;
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: flex-end;
+                }
+                .modal-btn {
+                    padding: 0.75rem 1.5rem;
+                    border: none;
+                    border-radius: 25px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-size: 1rem;
+                }
+                .modal-btn.primary {
+                    background: linear-gradient(135deg, #007F7B, #4B5D3E);
+                    color: white;
+                }
+                .modal-btn.primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 15px rgba(0, 127, 123, 0.3);
+                }
+                .modal-btn.secondary {
+                    background: #f8f9fa;
+                    color: #666;
+                    border: 1px solid #ddd;
+                }
+                .modal-btn.secondary:hover {
+                    background: #e9ecef;
+                    color: #333;
+                }
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes slideUp {
+                    from { transform: translateY(50px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(modal);
+            
+            // Close modal functionality
+            const closeBtn = modal.querySelector('.modal-close');
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Close on overlay click
+            modal.querySelector('.modal-overlay').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+        }
+
+        // Function to get guide content based on title
+        function getGuideContent(title) {
+            const content = {
+                'Social Media Safety': `
+                    <div class="guide-section">
+                        <h3>🔒 Platform Safety Settings</h3>
+                        <ul>
+                            <li>Enable privacy controls on all social media accounts</li>
+                            <li>Set accounts to private mode for children under 13</li>
+                            <li>Disable location sharing and tagging features</li>
+                            <li>Enable content filtering and inappropriate content blocking</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>👥 Privacy Management</h3>
+                        <ul>
+                            <li>Review and adjust privacy settings monthly</li>
+                            <li>Limit who can see your child's posts and profile</li>
+                            <li>Disable third-party app access to social media accounts</li>
+                            <li>Set up two-factor authentication for added security</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📱 Content Sharing Guidelines</h3>
+                        <ul>
+                            <li>Never share personal information (address, phone, school)</li>
+                            <li>Avoid posting photos that reveal location or routine</li>
+                            <li>Think before posting - content is permanent</li>
+                            <li>Respect others' privacy and ask permission before sharing</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>🛡️ Cyberbullying Prevention</h3>
+                        <ul>
+                            <li>Teach children to recognize and report cyberbullying</li>
+                            <li>Keep communication open about online experiences</li>
+                            <li>Document and report incidents to platforms and authorities</li>
+                            <li>Encourage positive online behavior and empathy</li>
+                        </ul>
+                    </div>
+                `,
+                'Building Healthy Digital Habits': `
+                    <div class="guide-section">
+                        <h3>🎮 Age-Appropriate Games</h3>
+                        <ul>
+                            <li>Check ESRB ratings before allowing games</li>
+                            <li>Research games for violence, language, and themes</li>
+                            <li>Set up parental controls on gaming consoles</li>
+                            <li>Monitor game content and adjust settings as needed</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>💬 Chat Safety</h3>
+                        <ul>
+                            <li>Disable voice and text chat for young children</li>
+                            <li>Teach children never to share personal information</li>
+                            <li>Monitor chat logs and friend lists regularly</li>
+                            <li>Report inappropriate behavior to game moderators</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>⏰ Screen Time Management</h3>
+                        <ul>
+                            <li>Set daily time limits for gaming (1-2 hours max)</li>
+                            <li>Use built-in parental controls for time restrictions</li>
+                            <li>Encourage breaks every 30 minutes</li>
+                            <li>Balance gaming with other activities and homework</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>💰 In-Game Purchases</h3>
+                        <ul>
+                            <li>Disable in-app purchases and microtransactions</li>
+                            <li>Use gift cards instead of credit cards</li>
+                            <li>Set spending limits and monitor transactions</li>
+                            <li>Teach children about the value of money</li>
+                        </ul>
+                    </div>
+                `,
+                'Family Communication Online': `
+                    <div class="guide-section">
+                        <h3>🔐 Personal Data Protection</h3>
+                        <ul>
+                            <li>Never share full names, addresses, or birth dates</li>
+                            <li>Use pseudonyms or nicknames online</li>
+                            <li>Be cautious with photos that reveal personal details</li>
+                            <li>Regularly review and delete unnecessary personal data</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>🔑 Password Security</h3>
+                        <ul>
+                            <li>Use strong, unique passwords for each account</li>
+                            <li>Enable two-factor authentication everywhere possible</li>
+                            <li>Use a password manager for family accounts</li>
+                            <li>Change passwords regularly and after security incidents</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>📱 Device Security</h3>
+                        <ul>
+                            <li>Keep all devices updated with latest security patches</li>
+                            <li>Install reputable antivirus and security software</li>
+                            <li>Enable device encryption and remote wipe capabilities</li>
+                            <li>Use biometric locks (fingerprint, face ID) when available</li>
+                        </ul>
+                    </div>
+                    <div class="guide-section">
+                        <h3>⚙️ Privacy Settings</h3>
+                        <ul>
+                            <li>Review and adjust privacy settings on all apps</li>
+                            <li>Limit data collection and sharing permissions</li>
+                            <li>Disable location services when not needed</li>
+                            <li>Regularly audit and clean up app permissions</li>
+                        </ul>
+                    </div>
+                `
+            };
+            
+            return content[title] || '<p>Guide content coming soon...</p>';
+        }
+
+        // Function to download checklist
+        function downloadChecklist(title) {
+            const checklistContent = {
+                'Device Safety Checklist': `
+                    DEVICE SAFETY CHECKLIST
+                    
+                    ☐ Enable device passcode/fingerprint lock
+                    ☐ Set up parental controls
+                    ☐ Install security software
+                    ☐ Enable automatic updates
+                    ☐ Set up screen time limits
+                    ☐ Configure privacy settings
+                    ☐ Enable location services only when needed
+                    ☐ Set up backup and recovery
+                    ☐ Install age-appropriate apps only
+                    ☐ Review app permissions regularly
+                    
+                    Date: ${new Date().toLocaleDateString()}
+                    Completed by: _________________
+                `,
+                'Online Safety Assessment': `
+                    ONLINE SAFETY ASSESSMENT
+                    
+                    FAMILY RULES:
+                    ☐ We discuss online activities openly
+                    ☐ We have agreed screen time limits
+                    ☐ We know each other's passwords
+                    ☐ We report concerning content
+                    ☐ We respect others online
+                    
+                    PRIVACY SETTINGS:
+                    ☐ Social media accounts are private
+                    ☐ Location sharing is disabled
+                    ☐ Personal info is not shared
+                    ☐ Photos are shared carefully
+                    
+                    COMMUNICATION:
+                    ☐ We talk about online experiences
+                    ☐ We know how to report issues
+                    ☐ We have emergency contacts saved
+                    
+                    Date: ${new Date().toLocaleDateString()}
+                    Family: _________________
+                `,
+                'Digital Communication Guide': `
+                    DIGITAL COMMUNICATION GUIDE
+                    
+                    SAFE MESSAGING RULES:
+                    ☐ Only message people you know in real life
+                    ☐ Never share personal information
+                    ☐ Be kind and respectful
+                    ☐ Don't respond to strangers
+                    ☐ Tell a parent about concerning messages
+                    
+                    APPROPRIATE CONTENT:
+                    ☐ No sharing of private photos
+                    ☐ No bullying or mean comments
+                    ☐ No sharing of personal details
+                    ☐ Think before sending
+                    
+                    EMERGENCY CONTACTS:
+                    Parent 1: _________________
+                    Parent 2: _________________
+                    Trusted Adult: _________________
+                    
+                    Date: ${new Date().toLocaleDateString()}
+                `
+            };
+            
+            const content = checklistContent[title];
+            if (content) {
+                const blob = new Blob([content], { type: 'text/plain' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${title.replace(/\s+/g, '_')}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                showNotification(`✅ ${title} downloaded successfully!`, 'success');
+            }
+        }
+
+        // Function to open interactive tools
+        function openInteractiveTool(title) {
+            const toolContent = {
+                'Screen Time Calculator': `
+                    <div class="tool-interface">
+                        <h3>Screen Time Calculator</h3>
+                        <div class="calculator">
+                            <div class="input-group">
+                                <label>Child's Age:</label>
+                                <select id="age-select">
+                                    <option value="2-5">2-5 years</option>
+                                    <option value="6-12">6-12 years</option>
+                                    <option value="13-17">13-17 years</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Day of Week:</label>
+                                <select id="day-select">
+                                    <option value="weekday">Weekday</option>
+                                    <option value="weekend">Weekend</option>
+                                </select>
+                            </div>
+                            <button onclick="calculateScreenTime()" class="calc-btn">Calculate Recommended Time</button>
+                            <div id="result" class="result-box"></div>
+                        </div>
+                    </div>
+                `,
+                'Conversation Starters': `
+                    <div class="tool-interface">
+                        <h3>Digital Safety Conversation Starters</h3>
+                        <div class="conversation-tool">
+                            <div class="input-group">
+                                <label>Child's Age:</label>
+                                <select id="conv-age">
+                                    <option value="young">5-8 years</option>
+                                    <option value="tween">9-12 years</option>
+                                    <option value="teen">13-17 years</option>
+                                </select>
+                            </div>
+                            <button onclick="generateConversation()" class="conv-btn">Generate Topic</button>
+                            <div id="conversation-result" class="conv-result"></div>
+                        </div>
+                    </div>
+                `,
+                'Safety Quiz': `
+                    <div class="tool-interface">
+                        <h3>Digital Safety Quiz</h3>
+                        <div class="quiz-tool">
+                            <div id="quiz-container">
+                                <p>Test your knowledge of digital safety practices!</p>
+                                <button onclick="startQuiz()" class="quiz-btn">Start Quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                `
+            };
+            
+            const modal = document.createElement('div');
+            modal.className = 'tool-modal';
+            modal.innerHTML = `
+                <div class="modal-overlay">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>${title}</h2>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            ${toolContent[title] || '<p>Tool coming soon...</p>'}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Add tool-specific styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .tool-modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 10000;
+                    animation: fadeIn 0.3s ease;
+                }
+                .tool-interface {
+                    padding: 2rem;
+                }
+                .tool-interface h3 {
+                    color: #007F7B;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+                .input-group {
+                    margin-bottom: 1.5rem;
+                }
+                .input-group label {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    font-weight: 600;
+                    color: #333;
+                }
+                .input-group select {
+                    width: 100%;
+                    padding: 0.75rem;
+                    border: 2px solid #e9ecef;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                    transition: border-color 0.3s ease;
+                }
+                .input-group select:focus {
+                    outline: none;
+                    border-color: #007F7B;
+                }
+                .calc-btn, .conv-btn, .quiz-btn {
+                    background: linear-gradient(135deg, #007F7B, #4B5D3E);
+                    color: white;
+                    border: none;
+                    padding: 1rem 2rem;
+                    border-radius: 25px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    width: 100%;
+                    margin-bottom: 1.5rem;
+                }
+                .calc-btn:hover, .conv-btn:hover, .quiz-btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 15px rgba(0, 127, 123, 0.3);
+                }
+                .result-box, .conv-result {
+                    background: #f8f9fa;
+                    padding: 1.5rem;
+                    border-radius: 15px;
+                    border-left: 4px solid #007F7B;
+                    margin-top: 1rem;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Close functionality
+            const closeBtn = modal.querySelector('.modal-close');
+            closeBtn.addEventListener('click', closeModal);
+            
+            modal.querySelector('.modal-overlay').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+        }
+
+        // Tool functions
+        function calculateScreenTime() {
+            const age = document.getElementById('age-select').value;
+            const day = document.getElementById('day-select').value;
+            
+            const recommendations = {
+                '2-5': { weekday: '1 hour', weekend: '1-2 hours' },
+                '6-12': { weekday: '2 hours', weekend: '3-4 hours' },
+                '13-17': { weekday: '3 hours', weekend: '4-5 hours' }
+            };
+            
+            const time = recommendations[age][day];
+            const result = document.getElementById('result');
+            result.innerHTML = `
+                <h4>Recommended Screen Time:</h4>
+                <p><strong>${time}</strong> per day</p>
+                <p><em>Remember to include breaks every 30 minutes and balance with other activities!</em></p>
+            `;
+        }
+
+        function generateConversation() {
+            const age = document.getElementById('conv-age').value;
+            
+            const topics = {
+                young: [
+                    "What's your favorite game to play on the tablet?",
+                    "What would you do if someone online asked for your name?",
+                    "How do you feel when you spend too much time on screens?",
+                    "What's one thing you learned online today?"
+                ],
+                tween: [
+                    "What social media platforms do your friends use?",
+                    "How do you handle mean comments online?",
+                    "What privacy settings do you have on your accounts?",
+                    "What would you do if someone shared your photo without permission?"
+                ],
+                teen: [
+                    "How do you verify information you find online?",
+                    "What's your digital footprint strategy?",
+                    "How do you balance online and offline relationships?",
+                    "What cybersecurity practices do you follow?"
+                ]
+            };
+            
+            const randomTopic = topics[age][Math.floor(Math.random() * topics[age].length)];
+            const result = document.getElementById('conversation-result');
+            result.innerHTML = `
+                <h4>Conversation Starter:</h4>
+                <p><strong>"${randomTopic}"</strong></p>
+                <p><em>Use this as a starting point for an open, non-judgmental discussion about digital safety.</em></p>
+            `;
+        }
+
+        function startQuiz() {
+            const questions = [
+                {
+                    question: "What's the best way to protect your child's online privacy?",
+                    options: ["Share everything with friends", "Use strong privacy settings", "Post personal information", "Ignore privacy concerns"],
+                    correct: 1
+                },
+                {
+                    question: "How often should you review your child's online activities?",
+                    options: ["Never", "Once a year", "Regularly and openly", "Only when there's a problem"],
+                    correct: 2
+                },
+                {
+                    question: "What should you do if your child encounters cyberbullying?",
+                    options: ["Ignore it", "Tell them to fight back", "Document and report it", "Delete their accounts"],
+                    correct: 2
+                }
+            ];
+            
+            let currentQuestion = 0;
+            let score = 0;
+            
+            function showQuestion() {
+                const q = questions[currentQuestion];
+                const container = document.getElementById('quiz-container');
+                container.innerHTML = `
+                    <h4>Question ${currentQuestion + 1} of ${questions.length}</h4>
+                    <p><strong>${q.question}</strong></p>
+                    <div class="quiz-options">
+                        ${q.options.map((option, index) => `
+                            <button onclick="selectAnswer(${index})" class="quiz-option">${option}</button>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
+            window.selectAnswer = function(selected) {
+                const q = questions[currentQuestion];
+                if (selected === q.correct) score++;
+                
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    showQuestion();
+                } else {
+                    const container = document.getElementById('quiz-container');
+                    const percentage = Math.round((score / questions.length) * 100);
+                    container.innerHTML = `
+                        <h4>Quiz Complete!</h4>
+                        <p>Your score: <strong>${score}/${questions.length} (${percentage}%)</strong></p>
+                        <p>${percentage >= 80 ? 'Excellent! You have great digital safety knowledge!' : 
+                           percentage >= 60 ? 'Good! Keep learning about digital safety!' : 
+                           'Keep learning! Review our guides for more information.'}</p>
+                        <button onclick="startQuiz()" class="quiz-btn">Take Quiz Again</button>
+                    `;
+                }
+            };
+            
+            showQuestion();
+        }
+
+        // Function to close modal
+        function closeModal() {
+            const modals = document.querySelectorAll('.guide-modal, .tool-modal');
+            modals.forEach(modal => {
+                modal.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    if (modal.parentNode) {
+                        modal.parentNode.removeChild(modal);
+                    }
+                }, 300);
+            });
+        }
+
+        // Function to download guide
+        function downloadGuide(title) {
+            showNotification(`

@@ -1,0 +1,219 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Use rules for all websites built by Trendtactics Digital using Cursor.
+
+autoAttach: true
+
+Write clean, maintainable, and scalable code
+
+Follow SOLID principles
+
+Emphasize component-driven, modular development
+
+Prefer functional and declarative programming patterns
+
+Practice type safety and static analysis (TypeScript preferred)
+
+Code Style
+
+Use tabs for indentation
+
+Use single quotes for strings
+
+Omit semicolons unless required
+
+Space after keywords and before parentheses
+
+Limit lines to 80 characters
+
+Use strict equality (===)
+
+Comment sections clearly (e.g., <!-- HERO SECTION -->)
+
+Project Structure & File Output
+
+All builds must use HTML5, CSS3, and JavaScript (React optional)
+
+Use TailwindCSS unless otherwise specified
+
+Structure: /index.html /about.html /contact.html /blog.html /blog-post.html /library.html (if eBooks) /courses.html, /course-detail.html, /student-dashboard.html (if LMS) /css/, /js/, /images/, /fonts/, /ebooks/ send.php robots.txt sitemap.xml privacy.html terms.html README.md
+
+Design & UI/UX
+
+Responsive and mobile-first is mandatory
+
+Use flexible layouts: Hero-first, Grid, Bento, Z-pattern, One-page Scroll
+
+Use Google Fonts depending on site type:
+
+Bold: Poppins, Inter, Montserrat
+
+Blogs: Lora, Playfair, Merriweather
+
+Agencies: IBM Plex Sans, Raleway, Nunito
+
+Ecommerce: Manrope, Ubuntu, Work Sans
+
+Portfolios: Space Grotesk, Figtree, Rubik
+
+
+Include dark mode toggle by default
+
+Security & Accessibility
+
+Sanitize user input (e.g., DOMPurify)
+
+Use semantic HTML with ARIA labels where necessary
+
+Ensure keyboard navigability
+
+Maintain contrast ratios for readability
+
+SEO Optimization
+
+Add meta title, description, canonical tags
+
+Include Open Graph + Twitter Cards
+
+robots.txt and sitemap.xml must be present
+
+Add favicon and Apple touch icon
+
+Use schema.org structured data
+
+Analytics & Tracking
+
+Google Analytics 4
+
+Optionally: Facebook Pixel (commented), Hotjar, Google Tag Manager
+
+Forms & Interactivity
+
+All forms must have input validation
+
+Use send.php, Formspree, or ConvertKit
+
+Add Thank You message or redirect
+
+Optional: reCAPTCHA or honeypot
+
+Blogs, eBooks & LMS
+
+Ask user before including
+
+Blog: /blog.html and /blog-post.html
+
+eBook Library: /library.html with .webp covers
+
+LMS: /courses.html, curriculum, quizzes, certificate placeholder
+
+Ecommerce
+
+Simulate cart, checkout, product grid
+
+Frontend-only integration with Paystack, Gumroad, Stripe
+
+Image & Video Handling
+
+Use .webp with JPEG/PNG fallback
+
+Lazy load all media
+
+Include descriptive alt text
+
+Multilingual Readiness
+
+Optional support for Yoruba, Igbo, Hausa, French, Arabic, Spanish, Portuguese, etc.
+
+Support i18n, LTR/RTL layout
+
+Branding & Signature
+
+Ask user: “Include Trendtactics Digital signature?”
+
+Options:
+
+<!-- Built by Trendtactics Digital | Akinola Olujobi -->/* Crafted by Trendtactics Digital | trendtactics.digital */ console.log("Built by Trendtactics Digital © 2025")
+
+Add visible credit only with permission
+
+Ask Before You Build
+
+Website type? (landing, blog, ecommerce, LMS...)
+
+Audience?
+
+For the style use (modern, Afrocentric, minimalist...)
+
+For features (blog, newsletter, LMS, etc.)
+
+Branding? (use Trendtactics Digital or custom)
+
+Sample content or placeholder needed?
+
+Performance & Best Practices
+
+Lazy load images and scripts
+
+Async/defer all non-critical scripts
+
+Minify CSS and JS where possible
+
+Use font-display: swap
+
+Never use lorem ipsum — generate real content
+
+Code must never feel AI-generated
+
+Deployment Compatibility
+
+Code must work seamlessly on:
+
+Cursor
+
+Create.xyz
+
+Netlify
+
+Replit
+
+cPanel File Manager
+
+React / Next.js Guidelines (if applicable)
+
+Use functional components and hooks
+
+TypeScript preferred with strict mode
+
+Structure directories in kebab-case
+
+Use Next.js components: <Image>, <Link>, <Head>, <Script>
+
+Use next-i18next for i18n
+
+Integrate Redux Toolkit or Context API for state
+
+Test with Jest & React Testing Library
+
+Testing & Validation
+
+Unit tests: use Jest, RTL
+
+Validate form inputs
+
+Use snapshot testing when necessary
+
+Handle edge cases
+
+Documentation
+
+Document all components and utilities with JSDoc
+
+Provide markdown README.md per project
+
+
+
+All Trendtactics Digital websites must uphold this .cursor-rules file for consistency, clarity, performance, and branding excellence.

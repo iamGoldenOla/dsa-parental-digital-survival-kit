@@ -1,0 +1,143 @@
+Build a professional, responsive website for a brand called “DSA PARENTAL DIGITAL SURVIVAL KIT.” The website should present the toolkit’s value to parents seeking to protect and guide their children online. It must feature educational content, downloadable tools, testimonials, expert advice, and blog articles. The site should look clean, modern, and trustworthy.
+
+🏷️ Brand Details
+Brand Name:
+DSA PARENTAL DIGITAL SURVIVAL KIT
+
+Tagline:
+Empowering Parents in the Digital Age
+
+Mission Statement:
+To equip parents and caregivers with the tools, knowledge, and confidence needed to raise safe, smart, and responsible digital citizens in a connected world.
+
+Vision Statement:
+To build a world where every parent feels empowered to navigate the digital landscape and protect their children from online harm.
+
+🧩 Core Toolkit Services / Features
+These are the primary services to showcase on the homepage and expand upon in the "Toolkit" or "Services" page:
+
+✅ Comprehensive Guides
+Topics such as social media safety, cyberbullying prevention, data privacy, and age-appropriate content control.
+
+📋 Practical Checklists
+Actionable downloadable checklists to assess and improve a child’s online safety.
+
+🔗 Recommended Resources
+Curated links to trusted parenting websites, educational platforms, apps, and cybersecurity tools.
+
+🧠 Interactive Tools
+Tools that help spark conversations between parents and kids around digital behavior and safety.
+
+🎓 Expert Advice
+Guidance from leading voices in child psychology, cyber safety, digital education, and parenting.
+
+🏠 Homepage Structure
+Design the homepage with the following components:
+
+Hero Section
+
+Headline: “Navigate the Digital World with Confidence”
+
+Subheadline: What the toolkit offers
+
+CTA Button: Download the Toolkit or Get Started Today
+
+Mission & Vision
+
+Visually present these core values with icons or illustrations
+
+Why Choose DSA Parental Digital Survival Kit?
+
+Feature trust points: Expert-Backed, Parent-Focused, Actionable Tools, Family-Centered
+
+Cards with icons or infographic style layout
+
+Toolkit Features
+
+Use visually appealing cards for each core service (as listed above)
+
+Testimonials Section
+
+Display 2–3 quotes from parents or educators
+
+Include names, photos or avatars (optional)
+
+Recent Blog Articles
+
+Teasers from 3 blog posts with image, title, and preview text
+
+Button to view the full blog archive
+
+Call to Action Banner
+
+“Take control of your child’s digital future—start today.”
+
+Button: Explore the Toolkit
+
+Newsletter Sign-Up
+
+Stay updated with parenting tips and online safety news.
+
+Footer
+
+Quick links (Home, About, Blog, Resources, Contact, Privacy)
+
+Social icons and email
+
+Trust badges/logos if applicable
+
+📄 Pages to Include
+Home
+
+About the Toolkit – Deep dive into mission, audience, and impact
+
+Guides & Checklists – Organized by topic, downloadable and searchable
+
+Interactive Tools – Tools to use at home (quiz, planners, conversation starters)
+
+Expert Advice – Insights, how-to articles, videos, and tip sheets
+
+Blog – Regular posts on digital parenting, trends, and tech safety
+
+Resources – External tools, apps, and articles categorized by age/issue
+
+FAQ – Address common parenting concerns (screen time, privacy, online games, etc.)
+
+Contact – Email form, support, newsletter subscription
+
+🎨 Design and Brand Colors
+Use the following placeholder brand color palette:
+
+Primary: #3E8EDE (Reliable Blue – trust, tech)
+
+Secondary: #A8DADC (Calming Aqua – support, friendliness)
+
+Accent: #F4A261 (Warm Orange – action, energy)
+
+Background: #F9FAFB (Soft Gray – clean and minimal)
+
+Text: #1F2937 (Deep Gray – readability)
+
+💡 Tone & Design Guidelines
+Clean, modern layout with rounded buttons and family-friendly icons
+
+Friendly and supportive voice, expert-backed tone
+
+Use of vector illustrations and diverse family imagery
+
+Optimized for mobile and tablet
+
+Clear calls to action and well-structured layout
+
+🔧 Functionality Requirements
+CMS support (for blogs and content updates)
+
+Embedded PDFs or downloadable links
+
+SEO-optimized
+
+SSL-secure and GDPR compliant
+
+Google Analytics integration
+
+Fast-loading, accessible (ADA/WCAG-compliant)
