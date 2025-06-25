@@ -69,6 +69,33 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Featured Video Section */}
+      <section className="py-20 bg-background">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold mb-12 text-center">Featured Video</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/pte3QoQn93g"
+                title="Digital Parenting Tips - Featured Video"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="mt-8 text-center">
+              <h3 className="text-xl font-semibold text-text mb-2">
+                Essential Digital Parenting Tips
+              </h3>
+              <p className="text-text/70">
+                Watch our featured video for expert advice on navigating the digital world with your children
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Posts */}
       <section className="py-20">
         <div className="container-custom">

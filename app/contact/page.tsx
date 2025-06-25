@@ -47,10 +47,10 @@ export default function ContactPage() {
                     </dt>
                     <dd>
                       <a
-                        href="mailto:contact@dsaparentkit.com"
+                        href="mailto:digitalparentalsurvivalkit@gmail.com"
                         className="text-text/70 hover:text-primary"
                       >
-                        contact@dsaparentkit.com
+                        digitalparentalsurvivalkit@gmail.com
                       </a>
                     </dd>
                   </div>

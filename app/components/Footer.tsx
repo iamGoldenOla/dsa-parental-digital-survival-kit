@@ -25,60 +25,40 @@ export default function Footer() {
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: '📘' },
-    { name: 'Twitter', href: '#', icon: '🐦' },
     { name: 'Instagram', href: '#', icon: '📸' },
-    { name: 'LinkedIn', href: '#', icon: '💼' },
   ]
 
   return (
-    <footer className="bg-text text-white">
-      <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">DSA Parental Digital Survival Kit</h3>
-            <p className="text-white/80 mb-4">
-              Empowering parents in the digital age with tools, knowledge, and confidence.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="text-2xl hover:text-primary transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
+    <footer className="footer py-10 mt-16 border-t border-gray-200 dark:border-gray-700 bg-footer text-footer-text">
+      <div className="container-custom grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="footer-section col-span-1">
+          <h3 className="text-xl font-bold mb-2">DSA Parent Kit</h3>
+          <p className="mb-4">Empowering parents in the digital age.</p>
+          <div className="flex space-x-4">
+            {socialLinks.map((link) => (
+              <a key={link.name} href={link.href} aria-label={link.name} className="text-2xl hover:text-primary transition-colors duration-200">
+                <span>{link.icon}</span>
+              </a>
+            ))}
           </div>
-
-          {/* Links Sections */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-lg font-semibold mb-4">{title}</h4>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-white/80 hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/60">
-          <p>&copy; {new Date().getFullYear()} DSA Parental Digital Survival Kit. All rights reserved.</p>
-        </div>
+        {Object.entries(footerLinks).map(([section, links]) => (
+          <div className="footer-section" key={section}>
+            <h4 className="font-semibold mb-2">{section}</h4>
+            <ul>
+              {links.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="hover:text-primary transition-colors duration-200">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div className="footer-bottom text-center mt-8 text-sm text-gray-500 dark:text-gray-400">
+        &copy; 2025 DSA Parent Kit. All rights reserved.
       </div>
     </footer>
   )
