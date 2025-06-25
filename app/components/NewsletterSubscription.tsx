@@ -1,39 +1,43 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function NewsletterSubscription() {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [errorMessage, setErrorMessage] = useState('')
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('loading')
-    setErrorMessage('')
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
 
     try {
-      const response = await fetch('/api/newsletter', {
-        method: 'POST',
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email }),
-      })
+      });
 
-      const data = await response.json()
+      const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to subscribe')
+        throw new Error(data.error || "Failed to subscribe");
       }
 
-      setStatus('success')
-      setEmail('')
+      setStatus("success");
+      setEmail("");
     } catch (error) {
-      setStatus('error')
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to subscribe')
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error ? error.message : "Failed to subscribe",
+      );
     }
-  }
+  };
 
   return (
     <div className="bg-background rounded-lg shadow-lg p-6">
@@ -41,7 +45,8 @@ export default function NewsletterSubscription() {
         Subscribe to Our Newsletter
       </h3>
       <p className="text-gray-600 mb-6">
-        Stay updated with the latest digital safety tips and resources for parents.
+        Stay updated with the latest digital safety tips and resources for
+        parents.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -62,22 +67,22 @@ export default function NewsletterSubscription() {
 
         <button
           type="submit"
-          disabled={status === 'loading'}
+          disabled={status === "loading"}
           className="w-full bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+          {status === "loading" ? "Subscribing..." : "Subscribe"}
         </button>
 
-        {status === 'success' && (
+        {status === "success" && (
           <p className="text-green-600 text-sm">
             Thank you for subscribing! Please check your email to confirm.
           </p>
         )}
 
-        {status === 'error' && (
+        {status === "error" && (
           <p className="text-red-600 text-sm">{errorMessage}</p>
         )}
       </form>
     </div>
-  )
-} 
+  );
+}

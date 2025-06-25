@@ -3,53 +3,53 @@ name: Dependency Update
 on:
   schedule:
     # Run every Monday at 9 AM UTC
-    - cron: '0 9 * * 1'
+    - cron: "0 9 * * 1"
   workflow_dispatch: # Allow manual trigger
 
 jobs:
   update-dependencies:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-        cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Check for outdated dependencies
-      run: npm outdated
-      
-    - name: Update dependencies
-      run: |
-        npm update
-        npm audit fix
-      
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: 'chore: update dependencies'
-        title: '🔄 Automated Dependency Update'
-        body: |
-          This PR updates dependencies to their latest versions.
-          
-          ## Changes
-          - Updated npm dependencies
-          - Applied security fixes
-          
-          ## Testing
-          - [ ] Build passes
-          - [ ] No breaking changes
-          - [ ] Functionality verified
-        branch: dependency-update
-        base: develop
-        delete-branch: true 
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check for outdated dependencies
+        run: npm outdated
+
+      - name: Update dependencies
+        run: |
+          npm update
+          npm audit fix
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update dependencies"
+          title: "🔄 Automated Dependency Update"
+          body: |
+            This PR updates dependencies to their latest versions.
+
+            ## Changes
+            - Updated npm dependencies
+            - Applied security fixes
+
+            ## Testing
+            - [ ] Build passes
+            - [ ] No breaking changes
+            - [ ] Functionality verified
+          branch: dependency-update
+          base: develop
+          delete-branch: true

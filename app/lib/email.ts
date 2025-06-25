@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+import nodemailer from "nodemailer";
 
 // Create reusable transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
@@ -9,17 +9,17 @@ const transporter = nodemailer.createTransport({
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASSWORD,
   },
-})
+});
 
 interface EmailData {
-  name: string
-  email: string
-  subject: string
-  message: string
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 
 export async function sendContactEmail(data: EmailData) {
-  const { name, email, subject, message } = data
+  const { name, email, subject, message } = data;
 
   // Email content
   const mailOptions = {
@@ -40,15 +40,15 @@ ${message}
 <p><strong>Email:</strong> ${email}</p>
 <p><strong>Subject:</strong> ${subject}</p>
 <p><strong>Message:</strong></p>
-<p>${message.replace(/\n/g, '<br>')}</p>
+<p>${message.replace(/\n/g, "<br>")}</p>
     `,
-  }
+  };
 
   // Send confirmation email to the user
   const confirmationMailOptions = {
     from: `"DSA Parent Kit" <${process.env.SMTP_FROM}>`,
     to: email,
-    subject: 'Thank you for contacting DSA Parent Kit',
+    subject: "Thank you for contacting DSA Parent Kit",
     text: `
 Dear ${name},
 
@@ -68,20 +68,20 @@ DSA Parent Kit Team
 <h3>Your Message Details:</h3>
 <p><strong>Subject:</strong> ${subject}</p>
 <p><strong>Message:</strong></p>
-<p>${message.replace(/\n/g, '<br>')}</p>
+<p>${message.replace(/\n/g, "<br>")}</p>
 <p>Best regards,<br>DSA Parent Kit Team</p>
     `,
-  }
+  };
 
   try {
     // Send both emails
     await Promise.all([
       transporter.sendMail(mailOptions),
       transporter.sendMail(confirmationMailOptions),
-    ])
-    return { success: true }
+    ]);
+    return { success: true };
   } catch (error) {
-    console.error('Email sending failed:', error)
-    return { success: false, error: 'Failed to send email' }
+    console.error("Email sending failed:", error);
+    return { success: false, error: "Failed to send email" };
   }
-} 
+}

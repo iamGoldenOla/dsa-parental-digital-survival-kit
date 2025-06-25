@@ -53,6 +53,7 @@ This guide will help you configure all the analytics tools that have been added 
 ## 📊 What Each Tool Tracks
 
 ### Google Analytics 4
+
 - **Page views and sessions**
 - **User demographics and behavior**
 - **Traffic sources**
@@ -60,18 +61,21 @@ This guide will help you configure all the analytics tools that have been added 
 - **Real-time data**
 
 ### Google Tag Manager
+
 - **Centralized tag management**
 - **Custom event tracking**
 - **A/B testing setup**
 - **Conversion tracking**
 
 ### Facebook Pixel
+
 - **Website visitors**
 - **Custom conversions**
 - **Retargeting audiences**
 - **Ad performance optimization**
 
 ### Hotjar
+
 - **User behavior recordings**
 - **Heatmaps**
 - **Conversion funnels**
@@ -83,23 +87,23 @@ Add these custom events to track important user interactions:
 
 ```javascript
 // Newsletter signup
-gtag('event', 'sign_up', {
-  method: 'newsletter'
+gtag("event", "sign_up", {
+  method: "newsletter",
 });
 
 // Toolkit download
-gtag('event', 'download', {
-  item_name: 'digital_safety_toolkit'
+gtag("event", "download", {
+  item_name: "digital_safety_toolkit",
 });
 
 // Contact form submission
-gtag('event', 'generate_lead', {
-  form_name: 'contact_form'
+gtag("event", "generate_lead", {
+  form_name: "contact_form",
 });
 
 // Guide reading
-gtag('event', 'view_item', {
-  item_name: 'social_media_safety_guide'
+gtag("event", "view_item", {
+  item_name: "social_media_safety_guide",
 });
 ```
 
@@ -124,11 +128,13 @@ gtag('event', 'view_item', {
 ## 📱 Privacy Compliance
 
 ### GDPR Compliance
+
 - Add cookie consent banner
 - Implement data retention policies
 - Provide opt-out mechanisms
 
 ### CCPA Compliance
+
 - Add "Do Not Sell My Personal Information" link
 - Implement opt-out mechanisms
 - Update privacy policy
@@ -136,25 +142,32 @@ gtag('event', 'view_item', {
 ## 🛠️ Additional Recommendations
 
 ### 1. Enhanced E-commerce Tracking
+
 ```javascript
 // Add to product pages
-gtag('event', 'view_item', {
-  items: [{
-    item_id: 'toolkit_premium',
-    item_name: 'Premium Digital Safety Toolkit',
-    category: 'Digital Safety'
-  }]
+gtag("event", "view_item", {
+  items: [
+    {
+      item_id: "toolkit_premium",
+      item_name: "Premium Digital Safety Toolkit",
+      category: "Digital Safety",
+    },
+  ],
 });
 ```
 
 ### 2. Custom Dimensions
+
 Set up custom dimensions in GA4 for:
+
 - User type (parent, educator, etc.)
 - Content category
 - Tool usage
 
 ### 3. Conversion Goals
+
 Set up conversion goals for:
+
 - Newsletter signups
 - Toolkit downloads
 - Contact form submissions
@@ -163,12 +176,15 @@ Set up conversion goals for:
 ## 📈 Performance Monitoring
 
 ### Core Web Vitals
+
 Monitor these metrics in GA4:
+
 - Largest Contentful Paint (LCP)
 - First Input Delay (FID)
 - Cumulative Layout Shift (CLS)
 
 ### User Experience Metrics
+
 - Bounce rate
 - Session duration
 - Pages per session
@@ -177,12 +193,14 @@ Monitor these metrics in GA4:
 ## 🔧 Troubleshooting
 
 ### Common Issues:
+
 1. **Analytics not tracking:** Check if ad blockers are enabled
 2. **GTM not loading:** Verify container ID is correct
 3. **Facebook Pixel errors:** Check pixel ID and event setup
 4. **Hotjar not recording:** Verify site ID and domain settings
 
 ### Debug Tools:
+
 - Google Analytics Debugger (Chrome extension)
 - Facebook Pixel Helper (Chrome extension)
 - GTM Preview mode
@@ -197,4 +215,4 @@ Monitor these metrics in GA4:
 
 ---
 
-**Note:** Replace all placeholder IDs with your actual tracking IDs before going live. Test thoroughly in a staging environment first. 
+**Note:** Replace all placeholder IDs with your actual tracking IDs before going live. Test thoroughly in a staging environment first.

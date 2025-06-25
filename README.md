@@ -15,29 +15,34 @@ A comprehensive web application designed to help parents navigate the digital wo
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18.x or higher
 - npm or yarn package manager
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/iamGoldenOla/dsa-parental-digital-survival-kit.git
    cd dsa-parental-digital-survival-kit
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    cp .env.example .env.local
    # Edit .env.local with your configuration
    ```
 
 4. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -74,6 +79,7 @@ dsa-parental-digital-survival-kit/
 ### Code Quality
 
 This project uses:
+
 - **ESLint** for code linting
 - **Prettier** for code formatting
 - **TypeScript** for type safety
@@ -99,18 +105,21 @@ The project is configured for automatic deployment to GitHub Pages:
 ### Manual Deployment
 
 #### Vercel
+
 ```bash
 npm install -g vercel
 vercel --prod
 ```
 
 #### Netlify
+
 ```bash
 npm run build
 # Upload the 'out' directory to Netlify
 ```
 
 #### Traditional Hosting
+
 ```bash
 npm run build
 # Upload the 'out' directory to your web server
@@ -136,6 +145,7 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ### Tailwind CSS
 
 The project uses Tailwind CSS with custom configuration:
+
 - Custom color palette
 - Responsive design utilities
 - Dark mode support
@@ -144,21 +154,25 @@ The project uses Tailwind CSS with custom configuration:
 ## 📱 Features in Detail
 
 ### Digital Safety Assessment
+
 - Interactive quizzes for different age groups
 - Personalized recommendations
 - Progress tracking
 
 ### Educational Resources
+
 - Age-appropriate content
 - Expert-curated articles
 - Video tutorials and guides
 
 ### Parenting Toolkit
+
 - Digital safety checklists
 - Family agreement templates
 - Screen time management tools
 
 ### Expert Articles
+
 - Regular updates from digital safety experts
 - Practical parenting advice
 - Latest trends and threats
@@ -201,4 +215,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for parents navigating the digital world** 
+**Built with ❤️ for parents navigating the digital world**

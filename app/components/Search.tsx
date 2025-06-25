@@ -1,63 +1,66 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
+import { useState, useEffect } from "react";
+import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 interface SearchResult {
-  title: string
-  description: string
-  url: string
-  type: 'blog' | 'resource' | 'toolkit'
+  title: string;
+  description: string;
+  url: string;
+  type: "blog" | "resource" | "toolkit";
 }
 
 export default function Search() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [query, setQuery] = useState('')
-  const [results, setResults] = useState<SearchResult[]>([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Mock search results - in a real app, this would be an API call
   const mockSearch = (searchQuery: string): SearchResult[] => {
     const allContent = [
       {
         title: "Understanding Your Child's Digital World",
-        description: "A comprehensive guide to the apps, games, and platforms your children are using.",
-        url: '/blog/understanding-digital-world',
-        type: 'blog'
+        description:
+          "A comprehensive guide to the apps, games, and platforms your children are using.",
+        url: "/blog/understanding-digital-world",
+        type: "blog",
       },
       {
         title: "Digital Safety Assessment",
         description: "Evaluate your family's current digital safety practices.",
-        url: '/toolkit/safety-assessment',
-        type: 'toolkit'
+        url: "/toolkit/safety-assessment",
+        type: "toolkit",
       },
       {
-        title: 'Family Link App Guide',
-        description: "Google's parental control app for managing your child's digital experience.",
-        url: '/resources/family-link',
-        type: 'resource'
-      }
-    ] as const
+        title: "Family Link App Guide",
+        description:
+          "Google's parental control app for managing your child's digital experience.",
+        url: "/resources/family-link",
+        type: "resource",
+      },
+    ] as const;
 
-    return allContent.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  }
+    return allContent.filter(
+      (item) =>
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
+  };
 
   useEffect(() => {
     if (query.length > 2) {
-      setIsLoading(true)
+      setIsLoading(true);
       // Simulate API delay
       setTimeout(() => {
-        setResults(mockSearch(query))
-        setIsLoading(false)
-      }, 300)
+        setResults(mockSearch(query));
+        setIsLoading(false);
+      }, 300);
     } else {
-      setResults([])
+      setResults([]);
     }
-  }, [query])
+  }, [query]);
 
   return (
     <>
@@ -125,7 +128,9 @@ export default function Search() {
                           </span>
                           <div>
                             <h4 className="font-medium">{result.title}</h4>
-                            <p className="text-sm text-text/70">{result.description}</p>
+                            <p className="text-sm text-text/70">
+                              {result.description}
+                            </p>
                           </div>
                         </div>
                       </Link>
@@ -142,5 +147,5 @@ export default function Search() {
         </div>
       )}
     </>
-  )
-} 
+  );
+}

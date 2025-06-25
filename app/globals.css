@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #007F7B; /* Sea Green */
-    --background-color: #FAF9F6; /* White */
-    --support-color: #4B5D3E; /* Army Green */
-    --text-color: #1F1F1F; /* Rich Black */
-    --white: #FAF9F6;
-    --gray-light: #E5E7EB;
-    --gray: #6B7280;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --primary-color: #007f7b; /* Sea Green */
+  --background-color: #faf9f6; /* White */
+  --support-color: #4b5d3e; /* Army Green */
+  --text-color: #1f1f1f; /* Rich Black */
+  --white: #faf9f6;
+  --gray-light: #e5e7eb;
+  --gray: #6b7280;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @tailwind base;
@@ -16,20 +16,30 @@
 @layer base {
   body {
     @apply antialiased;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
   }
   html.dark body {
-    color: #FAF9F6;
-    background-color: #181A1B;
+    color: #faf9f6;
+    background-color: #181a1b;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--text-color);
   }
-  html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
-    color: #FAF9F6;
+  html.dark h1,
+  html.dark h2,
+  html.dark h3,
+  html.dark h4,
+  html.dark h5,
+  html.dark h6 {
+    color: #faf9f6;
   }
 }
 
@@ -37,7 +47,7 @@
   .btn-primary {
     @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all;
   }
-  
+
   .btn-secondary {
     @apply bg-secondary text-text px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all;
   }
@@ -55,7 +65,7 @@
     z-index: 1000;
   }
   html.dark .navbar {
-    background-color: #23272A;
+    background-color: #23272a;
   }
 
   .logo a {
@@ -93,58 +103,96 @@
     background-color: var(--support-color);
   }
 
-  .features, .toolkit-features, .testimonials, .newsletter, .footer, .impact, .values, .cta, .quick-access {
+  .features,
+  .toolkit-features,
+  .testimonials,
+  .newsletter,
+  .footer,
+  .impact,
+  .values,
+  .cta,
+  .quick-access {
     background-color: var(--background-color);
   }
 
-  .features h2, .toolkit-features h2, .testimonials h2, .newsletter h2, .footer-section h3, .footer-section h4, .impact h2, .values h2, .cta h2 {
+  .features h2,
+  .toolkit-features h2,
+  .testimonials h2,
+  .newsletter h2,
+  .footer-section h3,
+  .footer-section h4,
+  .impact h2,
+  .values h2,
+  .cta h2 {
     color: var(--text-color);
   }
 
-  .feature-card, .toolkit-card, .testimonial, .mission-card, .vision-card, .value-card, .team-member {
+  .feature-card,
+  .toolkit-card,
+  .testimonial,
+  .mission-card,
+  .vision-card,
+  .value-card,
+  .team-member {
     background-color: var(--white);
     color: var(--text-color);
     border-radius: 10px;
     box-shadow: var(--shadow);
   }
-  html.dark .feature-card, html.dark .toolkit-card, html.dark .testimonial, html.dark .mission-card, html.dark .vision-card, html.dark .value-card, html.dark .team-member {
-    background-color: #23272A;
-    color: #FAF9F6;
+  html.dark .feature-card,
+  html.dark .toolkit-card,
+  html.dark .testimonial,
+  html.dark .mission-card,
+  html.dark .vision-card,
+  html.dark .value-card,
+  html.dark .team-member {
+    background-color: #23272a;
+    color: #faf9f6;
   }
 
-  .feature-card i, .toolkit-card i, .value-card i, .mission-card i, .vision-card i {
+  .feature-card i,
+  .toolkit-card i,
+  .value-card i,
+  .mission-card i,
+  .vision-card i {
     color: var(--primary-color);
   }
 
   .footer {
-    background-color: #4B5D3E !important;
-    color: #FAF9F6 !important;
+    background-color: #4b5d3e !important;
+    color: #faf9f6 !important;
   }
   html.dark .footer {
-    background-color: #181A1B !important;
-    color: #FAF9F6 !important;
+    background-color: #181a1b !important;
+    color: #faf9f6 !important;
   }
 
-  .footer a, .footer-section a {
-    color: #FAF9F6 !important;
+  .footer a,
+  .footer-section a {
+    color: #faf9f6 !important;
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
-  .footer a:hover, .footer-section a:hover {
-    color: #007F7B !important;
+  .footer a:hover,
+  .footer-section a:hover {
+    color: #007f7b !important;
   }
 
-  .footer-bottom, .footer hr, .footer .divider {
+  .footer-bottom,
+  .footer hr,
+  .footer .divider {
     border-top: 1px solid rgba(31, 31, 31, 0.2) !important;
   }
 
-  .divider, hr {
+  .divider,
+  hr {
     border-color: var(--support-color);
   }
 
-  .tag, .badge {
+  .tag,
+  .badge {
     background-color: var(--support-color);
     color: var(--white);
   }
-} 
+}

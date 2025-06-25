@@ -1,290 +1,503 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSA Parental Kit - Digital Safety for Families</title>
-    
+
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
     </script>
-    
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-    
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+    </script>
+
     <!-- Facebook Pixel -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
-        fbq('track', 'PageView');
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "YOUR_FACEBOOK_PIXEL_ID");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
         src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
     /></noscript>
-    
+
     <!-- Hotjar Tracking Code -->
     <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: YOUR_HOTJAR_ID, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <!-- Favicon -->
-    <link rel="icon" href="public/favicon.webp" type="image/webp">
-    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+    <link rel="icon" href="public/favicon.webp" type="image/webp" />
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/BDM.webp" alt="BDM Logo" style="height:72px;width:auto;vertical-align:middle;">
-                </a>
-            </div>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="toolkit.html">Toolkit</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/BDM.webp"
+              alt="BDM Logo"
+              style="height: 72px; width: auto; vertical-align: middle"
+            />
+          </a>
         </div>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" style="position:relative;background: linear-gradient(to right, rgba(31,31,31,0.45), rgba(75,93,62,0.45)), url('images/hero-section.webp') top center/cover no-repeat fixed;padding-top:4rem;padding-bottom:4rem;">
-        <div class="container">
-            <div style="max-width:500px;text-align:left;color:#fff;z-index:2;margin-top:4rem;">
-                <h1 style="font-size:2.5rem;font-weight:bold;margin-bottom:1rem;color:#fff;">Navigate the Digital World with Confidence</h1>
-                <p style="font-size:1.25rem;margin-bottom:2rem;color:#fff;">Empowering parents with the tools and knowledge to protect their children in the digital world.</p>
-                <a href="toolkit.html" class="cta-button" style="color:#fff;">Get Started Today</a>
-            </div>
+    <header
+      class="hero"
+      style="
+        position: relative;
+        background:
+          linear-gradient(
+            to right,
+            rgba(31, 31, 31, 0.45),
+            rgba(75, 93, 62, 0.45)
+          ),
+          url(&quot;images/hero-section.webp&quot;) top center/cover no-repeat
+            fixed;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      "
+    >
+      <div class="container">
+        <div
+          style="
+            max-width: 500px;
+            text-align: left;
+            color: #fff;
+            z-index: 2;
+            margin-top: 4rem;
+          "
+        >
+          <h1
+            style="
+              font-size: 2.5rem;
+              font-weight: bold;
+              margin-bottom: 1rem;
+              color: #fff;
+            "
+          >
+            Navigate the Digital World with Confidence
+          </h1>
+          <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #fff">
+            Empowering parents with the tools and knowledge to protect their
+            children in the digital world.
+          </p>
+          <a href="toolkit.html" class="cta-button" style="color: #fff"
+            >Get Started Today</a
+          >
         </div>
+      </div>
     </header>
 
     <!-- Features Section -->
     <section class="features">
-        <div class="container">
-            <h2>Why Choose DSA Parent Kit?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fa-solid fa-shield"></i>
-                    <h3>Expert-Backed</h3>
-                    <p>Guidance from leading voices in child psychology and digital safety.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-users"></i>
-                    <h3>Parent-Focused</h3>
-                    <p>Tools and resources designed specifically for modern parents.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <h3>Actionable Tools</h3>
-                    <p>Practical checklists and guides you can implement today.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-house"></i>
-                    <h3>Family-Centered</h3>
-                    <p>Solutions that work for your entire family's digital needs.</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2>Why Choose DSA Parent Kit?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fa-solid fa-shield"></i>
+            <h3>Expert-Backed</h3>
+            <p>
+              Guidance from leading voices in child psychology and digital
+              safety.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Parent-Focused</h3>
+            <p>Tools and resources designed specifically for modern parents.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Actionable Tools</h3>
+            <p>Practical checklists and guides you can implement today.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-house"></i>
+            <h3>Family-Centered</h3>
+            <p>Solutions that work for your entire family's digital needs.</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Toolkit Features -->
     <section class="toolkit-features">
-        <div class="container">
-            <h2>Core Toolkit Features</h2>
-            <div class="toolkit-grid">
-                <div class="toolkit-card">
-                    <i class="fas fa-book"></i>
-                    <h3>Comprehensive Guides</h3>
-                    <p>Learn about social media safety, cyberbullying prevention, and more.</p>
-                    <a href="toolkit.html#guides" class="learn-more">Learn More</a>
-                </div>
-                <div class="toolkit-card">
-                    <i class="fas fa-tasks"></i>
-                    <h3>Practical Checklists</h3>
-                    <p>Downloadable checklists to assess and improve online safety.</p>
-                    <a href="toolkit.html#checklists" class="learn-more">Learn More</a>
-                </div>
-                <div class="toolkit-card">
-                    <i class="fas fa-link"></i>
-                    <h3>Recommended Resources</h3>
-                    <p>Curated links to trusted parenting websites and tools.</p>
-                    <a href="resources.html" class="learn-more">Learn More</a>
-                </div>
-            </div>
+      <div class="container">
+        <h2>Core Toolkit Features</h2>
+        <div class="toolkit-grid">
+          <div class="toolkit-card">
+            <i class="fas fa-book"></i>
+            <h3>Comprehensive Guides</h3>
+            <p>
+              Learn about social media safety, cyberbullying prevention, and
+              more.
+            </p>
+            <a href="toolkit.html#guides" class="learn-more">Learn More</a>
+          </div>
+          <div class="toolkit-card">
+            <i class="fas fa-tasks"></i>
+            <h3>Practical Checklists</h3>
+            <p>Downloadable checklists to assess and improve online safety.</p>
+            <a href="toolkit.html#checklists" class="learn-more">Learn More</a>
+          </div>
+          <div class="toolkit-card">
+            <i class="fas fa-link"></i>
+            <h3>Recommended Resources</h3>
+            <p>Curated links to trusted parenting websites and tools.</p>
+            <a href="resources.html" class="learn-more">Learn More</a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section class="testimonials">
-        <div class="container">
-            <h2>What Parents Say</h2>
-            <div class="testimonial-flex" style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap;justify-content:center;">
-                <div class="testimonial-video" style="width:400px;height:300px;flex-shrink:0;">
-                    <div style="position:relative; width:100%; height:100%; overflow:hidden; background:#000;">
-                        <iframe src="https://www.youtube.com/embed/ui2EPESzQ14" title="Parent Testimonial Video" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
-                <div style="width:400px;height:300px;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;">
-                    <div id="testimonial-carousel" class="testimonial-carousel" style="width:100%;height:100%;">
-                        <div class="testimonial-slide active" style="background:#4FC3F7;transition:background 0.5s;">
-                            <div class="testimonial-content" style="color:#fff;">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah M." class="testimonial-img">
-                                <p class="testimonial-text" style="color:#fff;">"This toolkit has been a game-changer for our family. The guides are practical and easy to follow."</p>
-                                <div class="testimonial-author" style="color:#fff;">
-                                    <h4 style="color:#fff;">Sarah M.</h4>
-                                    <p style="color:#fff;">Mother of two</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide" style="background:#81C784;transition:background 0.5s;">
-                            <div class="testimonial-content" style="color:#fff;">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James O." class="testimonial-img">
-                                <p class="testimonial-text" style="color:#fff;">"I finally feel confident about my kids' online safety. The checklists are so helpful!"</p>
-                                <div class="testimonial-author" style="color:#fff;">
-                                    <h4 style="color:#fff;">James O.</h4>
-                                    <p style="color:#fff;">Father & Educator</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide" style="background:#FFD54F;transition:background 0.5s;">
-                            <div class="testimonial-content" style="color:#fff;">
-                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Aisha R." class="testimonial-img">
-                                <p class="testimonial-text" style="color:#fff;">"The resources and expert advice have made digital parenting so much easier for me."</p>
-                                <div class="testimonial-author" style="color:#fff;">
-                                    <h4 style="color:#fff;">Aisha R.</h4>
-                                    <p style="color:#fff;">Single Mom</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide" style="background:#EC407A;transition:background 0.5s;">
-                            <div class="testimonial-content" style="color:#fff;">
-                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Emeka U.">
-                                <p class="testimonial-text" style="color:#fff;">"The digital safety conversation starters helped us connect as a family. Highly recommend!"</p>
-                                <div class="testimonial-author" style="color:#fff;">
-                                    <h4 style="color:#fff;">Emeka U.</h4>
-                                    <p style="color:#fff;">Father of three</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-slide" style="background:#BA68C8;transition:background 0.5s;">
-                            <div class="testimonial-content" style="color:#fff;">
-                                <img src="https://randomuser.me/api/portraits/women/85.jpg" alt="Kemi O.">
-                                <p class="testimonial-text" style="color:#fff;">"I love the expert articles and practical tips. The toolkit is a must-have for every parent!"</p>
-                                <div class="testimonial-author" style="color:#fff;">
-                                    <h4 style="color:#fff;">Kemi O.</h4>
-                                    <p style="color:#fff;">Parent & Teacher</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="testimonial-arrow left" aria-label="Previous testimonial">&#10094;</button>
-                        <button class="testimonial-arrow right" aria-label="Next testimonial">&#10095;</button>
-                        <div class="testimonial-dots">
-                            <span class="testimonial-dot active"></span>
-                            <span class="testimonial-dot"></span>
-                            <span class="testimonial-dot"></span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>What Parents Say</h2>
+        <div
+          class="testimonial-flex"
+          style="
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+          "
+        >
+          <div
+            class="testimonial-video"
+            style="width: 400px; height: 300px; flex-shrink: 0"
+          >
+            <div
+              style="
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background: #000;
+              "
+            >
+              <iframe
+                src="https://www.youtube.com/embed/ui2EPESzQ14"
+                title="Parent Testimonial Video"
+                frameborder="0"
+                allowfullscreen
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></iframe>
             </div>
+          </div>
+          <div
+            style="
+              width: 400px;
+              height: 300px;
+              flex-shrink: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+          >
+            <div
+              id="testimonial-carousel"
+              class="testimonial-carousel"
+              style="width: 100%; height: 100%"
+            >
+              <div
+                class="testimonial-slide active"
+                style="background: #4fc3f7; transition: background 0.5s"
+              >
+                <div class="testimonial-content" style="color: #fff">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Sarah M."
+                    class="testimonial-img"
+                  />
+                  <p class="testimonial-text" style="color: #fff">
+                    "This toolkit has been a game-changer for our family. The
+                    guides are practical and easy to follow."
+                  </p>
+                  <div class="testimonial-author" style="color: #fff">
+                    <h4 style="color: #fff">Sarah M.</h4>
+                    <p style="color: #fff">Mother of two</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide"
+                style="background: #81c784; transition: background 0.5s"
+              >
+                <div class="testimonial-content" style="color: #fff">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="James O."
+                    class="testimonial-img"
+                  />
+                  <p class="testimonial-text" style="color: #fff">
+                    "I finally feel confident about my kids' online safety. The
+                    checklists are so helpful!"
+                  </p>
+                  <div class="testimonial-author" style="color: #fff">
+                    <h4 style="color: #fff">James O.</h4>
+                    <p style="color: #fff">Father & Educator</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide"
+                style="background: #ffd54f; transition: background 0.5s"
+              >
+                <div class="testimonial-content" style="color: #fff">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/65.jpg"
+                    alt="Aisha R."
+                    class="testimonial-img"
+                  />
+                  <p class="testimonial-text" style="color: #fff">
+                    "The resources and expert advice have made digital parenting
+                    so much easier for me."
+                  </p>
+                  <div class="testimonial-author" style="color: #fff">
+                    <h4 style="color: #fff">Aisha R.</h4>
+                    <p style="color: #fff">Single Mom</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide"
+                style="background: #ec407a; transition: background 0.5s"
+              >
+                <div class="testimonial-content" style="color: #fff">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/75.jpg"
+                    alt="Emeka U."
+                  />
+                  <p class="testimonial-text" style="color: #fff">
+                    "The digital safety conversation starters helped us connect
+                    as a family. Highly recommend!"
+                  </p>
+                  <div class="testimonial-author" style="color: #fff">
+                    <h4 style="color: #fff">Emeka U.</h4>
+                    <p style="color: #fff">Father of three</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="testimonial-slide"
+                style="background: #ba68c8; transition: background 0.5s"
+              >
+                <div class="testimonial-content" style="color: #fff">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/85.jpg"
+                    alt="Kemi O."
+                  />
+                  <p class="testimonial-text" style="color: #fff">
+                    "I love the expert articles and practical tips. The toolkit
+                    is a must-have for every parent!"
+                  </p>
+                  <div class="testimonial-author" style="color: #fff">
+                    <h4 style="color: #fff">Kemi O.</h4>
+                    <p style="color: #fff">Parent & Teacher</p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="testimonial-arrow left"
+                aria-label="Previous testimonial"
+              >
+                &#10094;
+              </button>
+              <button
+                class="testimonial-arrow right"
+                aria-label="Next testimonial"
+              >
+                &#10095;
+              </button>
+              <div class="testimonial-dots">
+                <span class="testimonial-dot active"></span>
+                <span class="testimonial-dot"></span>
+                <span class="testimonial-dot"></span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Newsletter -->
     <section class="newsletter">
-        <div class="container">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to our newsletter for the latest digital safety tips and resources.</p>
-            <form id="newsletter-form" class="newsletter-form">
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <button type="submit" class="subscribe-btn">Subscribe</button>
-            </form>
-            <div id="newsletter-message"></div>
-        </div>
+      <div class="container">
+        <h2>Stay Updated</h2>
+        <p>
+          Subscribe to our newsletter for the latest digital safety tips and
+          resources.
+        </p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+        <div id="newsletter-message"></div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>DSA Parent Kit</h3>
-                    <p>Empowering parents in the digital age.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/16bkCEHA2z/?mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/dsaparentalsurvivalkit/profilecard/?igsh=MXBrZjNwd3BxZGVrdQ==" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="toolkit.html">Toolkit</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>DSA Parent Kit</h3>
+            <p>Empowering parents in the digital age.</p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/16bkCEHA2z/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/dsaparentalsurvivalkit/profilecard/?igsh=MXBrZjNwd3BxZGVrdQ=="
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="toolkit.html">Toolkit</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms & Conditions</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script src="js/newsletter.js"></script>
-</body>
-</html> 
+  </body>
+</html>

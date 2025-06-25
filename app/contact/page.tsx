@@ -1,5 +1,9 @@
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
-import ContactForm from '../components/ContactForm'
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
+import ContactForm from "../components/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -12,8 +16,8 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="mt-6 text-lg leading-8 text-text/70">
-              Have questions about digital safety? We're here to help. Reach out to us
-              and we'll get back to you as soon as possible.
+              Have questions about digital safety? We're here to help. Reach out
+              to us and we'll get back to you as soon as possible.
             </p>
           </div>
         </div>
@@ -38,12 +42,17 @@ export default function ContactPage() {
           <div className="lg:col-span-4">
             <div className="space-y-8">
               <div>
-                <h3 className="text-lg font-semibold text-text">Contact Information</h3>
+                <h3 className="text-lg font-semibold text-text">
+                  Contact Information
+                </h3>
                 <dl className="mt-4 space-y-4">
                   <div className="flex gap-x-4">
                     <dt className="flex-none">
                       <span className="sr-only">Email</span>
-                      <EnvelopeIcon className="h-6 w-6 text-text/70" aria-hidden="true" />
+                      <EnvelopeIcon
+                        className="h-6 w-6 text-text/70"
+                        aria-hidden="true"
+                      />
                     </dt>
                     <dd>
                       <a
@@ -57,7 +66,10 @@ export default function ContactPage() {
                   <div className="flex gap-x-4">
                     <dt className="flex-none">
                       <span className="sr-only">Phone</span>
-                      <PhoneIcon className="h-6 w-6 text-text/70" aria-hidden="true" />
+                      <PhoneIcon
+                        className="h-6 w-6 text-text/70"
+                        aria-hidden="true"
+                      />
                     </dt>
                     <dd>
                       <a
@@ -71,7 +83,10 @@ export default function ContactPage() {
                   <div className="flex gap-x-4">
                     <dt className="flex-none">
                       <span className="sr-only">Address</span>
-                      <MapPinIcon className="h-6 w-6 text-text/70" aria-hidden="true" />
+                      <MapPinIcon
+                        className="h-6 w-6 text-text/70"
+                        aria-hidden="true"
+                      />
                     </dt>
                     <dd>
                       <address className="text-text/70 not-italic">
@@ -87,7 +102,9 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-text">Support Hours</h3>
+                <h3 className="text-lg font-semibold text-text">
+                  Support Hours
+                </h3>
                 <dl className="mt-4 space-y-4">
                   <div>
                     <dt className="text-text/70">Monday - Friday</dt>
@@ -108,10 +125,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-text">Quick Links</h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="/faq"
-                      className="text-text/70 hover:text-primary"
-                    >
+                    <a href="/faq" className="text-text/70 hover:text-primary">
                       Frequently Asked Questions
                     </a>
                   </li>
@@ -124,10 +138,7 @@ export default function ContactPage() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/blog"
-                      className="text-text/70 hover:text-primary"
-                    >
+                    <a href="/blog" className="text-text/70 hover:text-primary">
                       Latest Articles
                     </a>
                   </li>
@@ -138,5 +149,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}

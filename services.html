@@ -1,563 +1,857 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services - DSA Parent Kit</title>
-    
+
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
     </script>
-    
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-    
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+    </script>
+
     <!-- Facebook Pixel -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
-        fbq('track', 'PageView');
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "YOUR_FACEBOOK_PIXEL_ID");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
         src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
     /></noscript>
-    
+
     <!-- Hotjar Tracking Code -->
     <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: YOUR_HOTJAR_ID, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .pricing-btn, .guide-link {
-            padding: 0.75rem 1.5rem !important;
-            min-width: unset !important;
-            width: auto !important;
-            font-size: 1rem;
-            border-radius: 30px;
-            margin-top: 1rem;
-        }
+      .pricing-btn,
+      .guide-link {
+        padding: 0.75rem 1.5rem !important;
+        min-width: unset !important;
+        width: auto !important;
+        font-size: 1rem;
+        border-radius: 30px;
+        margin-top: 1rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/BDM.webp" alt="BDM Logo" style="height:72px;width:auto;vertical-align:middle;">
-                </a>
-            </div>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="toolkit.html">Toolkit</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/BDM.webp"
+              alt="BDM Logo"
+              style="height: 72px; width: auto; vertical-align: middle"
+            />
+          </a>
         </div>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="toolkit.html">Toolkit</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Services Hero Section -->
-    <header class="hero" style="position:relative;background: linear-gradient(to right, rgba(31,31,31,0.45), rgba(75,93,62,0.45)), url('images/service_page.webp') center center/cover no-repeat fixed;">
-        <div class="container">
-            <div style="max-width:600px;text-align:left;color:#fff;z-index:2;margin-top:4rem;">
-                <h1 style="font-size:2.5rem;font-weight:bold;margin-bottom:1rem;color:#fff;">Our Services</h1>
-                <p style="font-size:1.25rem;margin-bottom:2rem;color:#fff;">Comprehensive digital safety solutions tailored to your family's needs</p>
-                <a href="#services" class="cta-button" style="color:#fff;">Explore Services</a>
-            </div>
+    <header
+      class="hero"
+      style="
+        position: relative;
+        background:
+          linear-gradient(
+            to right,
+            rgba(31, 31, 31, 0.45),
+            rgba(75, 93, 62, 0.45)
+          ),
+          url(&quot;images/service_page.webp&quot;) center center/cover
+            no-repeat fixed;
+      "
+    >
+      <div class="container">
+        <div
+          style="
+            max-width: 600px;
+            text-align: left;
+            color: #fff;
+            z-index: 2;
+            margin-top: 4rem;
+          "
+        >
+          <h1
+            style="
+              font-size: 2.5rem;
+              font-weight: bold;
+              margin-bottom: 1rem;
+              color: #fff;
+            "
+          >
+            Our Services
+          </h1>
+          <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #fff">
+            Comprehensive digital safety solutions tailored to your family's
+            needs
+          </p>
+          <a href="#services" class="cta-button" style="color: #fff"
+            >Explore Services</a
+          >
         </div>
+      </div>
     </header>
 
     <!-- Services Overview -->
     <section id="services" class="guides">
-        <div class="container">
-            <h2>How We Support Your Digital Parenting Journey</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
-                From free resources to personalized consultations, we offer multiple levels of support to help you navigate the digital world with confidence.
-            </p>
-            
-            <div class="guides-grid">
-                <div class="guide-card">
-                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&w=400&q=80" alt="Free Resources - Digital Safety Toolkit">
-                    <div class="guide-content">
-                        <h3>Free Resources</h3>
-                        <p>Access our comprehensive toolkit, guides, and educational content at no cost to get started on your digital parenting journey.</p>
-                        <ul class="guide-topics">
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Digital Safety Toolkit</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Educational Guides</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Safety Checklists</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Blog Articles</li>
-                        </ul>
-                        <a href="toolkit.html" class="guide-link">Get Started Free</a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>How We Support Your Digital Parenting Journey</h2>
+        <p
+          style="
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #666;
+          "
+        >
+          From free resources to personalized consultations, we offer multiple
+          levels of support to help you navigate the digital world with
+          confidence.
+        </p>
 
-                <div class="guide-card">
-                    <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&w=400&q=80" alt="Community Membership - Supportive Network">
-                    <div class="guide-content">
-                        <h3>Community Membership</h3>
-                        <p>Join our supportive community of parents and access exclusive resources, expert guidance, and peer support.</p>
-                        <ul class="guide-topics">
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Private Facebook Group</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Monthly Webinars</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Expert Q&A Sessions</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Peer Support Network</li>
-                        </ul>
-                        <a href="#pricing" class="guide-link">Join Community</a>
-                    </div>
-                </div>
-
-                <div class="guide-card">
-                    <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&w=400&q=80" alt="Personal Consultation - Expert Guidance">
-                    <div class="guide-content">
-                        <h3>Personal Consultation</h3>
-                        <p>Get personalized advice from our digital safety experts with one-on-one sessions tailored to your family's needs.</p>
-                        <ul class="guide-topics">
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> 1-on-1 Sessions</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Custom Safety Plan</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Follow-up Support</li>
-                            <li><i class="fas fa-check-circle" style="color: #007F7B;"></i> Priority Access</li>
-                        </ul>
-                        <a href="contact.html" class="guide-link">Book Consultation</a>
-                    </div>
-                </div>
+        <div class="guides-grid">
+          <div class="guide-card">
+            <img
+              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&w=400&q=80"
+              alt="Free Resources - Digital Safety Toolkit"
+            />
+            <div class="guide-content">
+              <h3>Free Resources</h3>
+              <p>
+                Access our comprehensive toolkit, guides, and educational
+                content at no cost to get started on your digital parenting
+                journey.
+              </p>
+              <ul class="guide-topics">
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Digital Safety Toolkit
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Educational Guides
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Safety Checklists
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Blog Articles
+                </li>
+              </ul>
+              <a href="toolkit.html" class="guide-link">Get Started Free</a>
             </div>
+          </div>
+
+          <div class="guide-card">
+            <img
+              src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&w=400&q=80"
+              alt="Community Membership - Supportive Network"
+            />
+            <div class="guide-content">
+              <h3>Community Membership</h3>
+              <p>
+                Join our supportive community of parents and access exclusive
+                resources, expert guidance, and peer support.
+              </p>
+              <ul class="guide-topics">
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Private Facebook Group
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Monthly Webinars
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Expert Q&A Sessions
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Peer Support Network
+                </li>
+              </ul>
+              <a href="#pricing" class="guide-link">Join Community</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <img
+              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&w=400&q=80"
+              alt="Personal Consultation - Expert Guidance"
+            />
+            <div class="guide-content">
+              <h3>Personal Consultation</h3>
+              <p>
+                Get personalized advice from our digital safety experts with
+                one-on-one sessions tailored to your family's needs.
+              </p>
+              <ul class="guide-topics">
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  1-on-1 Sessions
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Custom Safety Plan
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Follow-up Support
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #007f7b"></i>
+                  Priority Access
+                </li>
+              </ul>
+              <a href="contact.html" class="guide-link">Book Consultation</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
-        <div class="container">
-            <h2>Choose Your Plan</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
-                Flexible options to fit your family's needs and budget
-            </p>
+      <div class="container">
+        <h2>Choose Your Plan</h2>
+        <p
+          style="
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #666;
+          "
+        >
+          Flexible options to fit your family's needs and budget
+        </p>
 
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Free</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">0</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Access to Digital Safety Toolkit</li>
-                        <li><i class="fas fa-check"></i> Educational Guides & Checklists</li>
-                        <li><i class="fas fa-check"></i> Blog Articles & Resources</li>
-                        <li><i class="fas fa-check"></i> Basic Email Support</li>
-                        <li class="disabled"><i class="fas fa-times"></i> Community Access</li>
-                        <li class="disabled"><i class="fas fa-times"></i> Expert Consultations</li>
-                    </ul>
-                    <a href="toolkit.html" class="pricing-btn">Get Started</a>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Community</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">19</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Free</li>
-                        <li><i class="fas fa-check"></i> Private Facebook Community</li>
-                        <li><i class="fas fa-check"></i> Monthly Expert Webinars</li>
-                        <li><i class="fas fa-check"></i> Q&A Sessions</li>
-                        <li><i class="fas fa-check"></i> Peer Support Network</li>
-                        <li><i class="fas fa-check"></i> Priority Email Support</li>
-                    </ul>
-                    <a href="#" class="pricing-btn featured">Join Now</a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Premium</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">99</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Community</li>
-                        <li><i class="fas fa-check"></i> 1-on-1 Expert Consultation</li>
-                        <li><i class="fas fa-check"></i> Custom Digital Safety Plan</li>
-                        <li><i class="fas fa-check"></i> Monthly Check-ins</li>
-                        <li><i class="fas fa-check"></i> Emergency Support Line</li>
-                        <li><i class="fas fa-check"></i> Family Safety Assessment</li>
-                    </ul>
-                    <a href="contact.html" class="pricing-btn">Get Premium</a>
-                </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Free</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">0</span>
+                <span class="period">/month</span>
+              </div>
             </div>
+            <ul class="pricing-features">
+              <li>
+                <i class="fas fa-check"></i> Access to Digital Safety Toolkit
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Educational Guides & Checklists
+              </li>
+              <li><i class="fas fa-check"></i> Blog Articles & Resources</li>
+              <li><i class="fas fa-check"></i> Basic Email Support</li>
+              <li class="disabled">
+                <i class="fas fa-times"></i> Community Access
+              </li>
+              <li class="disabled">
+                <i class="fas fa-times"></i> Expert Consultations
+              </li>
+            </ul>
+            <a href="toolkit.html" class="pricing-btn">Get Started</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Community</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">19</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Everything in Free</li>
+              <li><i class="fas fa-check"></i> Private Facebook Community</li>
+              <li><i class="fas fa-check"></i> Monthly Expert Webinars</li>
+              <li><i class="fas fa-check"></i> Q&A Sessions</li>
+              <li><i class="fas fa-check"></i> Peer Support Network</li>
+              <li><i class="fas fa-check"></i> Priority Email Support</li>
+            </ul>
+            <a href="#" class="pricing-btn featured">Join Now</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Premium</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">99</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Everything in Community</li>
+              <li><i class="fas fa-check"></i> 1-on-1 Expert Consultation</li>
+              <li><i class="fas fa-check"></i> Custom Digital Safety Plan</li>
+              <li><i class="fas fa-check"></i> Monthly Check-ins</li>
+              <li><i class="fas fa-check"></i> Emergency Support Line</li>
+              <li><i class="fas fa-check"></i> Family Safety Assessment</li>
+            </ul>
+            <a href="contact.html" class="pricing-btn">Get Premium</a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Service Details -->
     <section class="service-details">
-        <div class="container">
-            <h2>Detailed Service Breakdown</h2>
-            
-            <div class="service-detail-grid">
-                <div class="service-detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Educational Resources</h3>
-                    <p>Comprehensive guides covering all aspects of digital safety for children of all ages.</p>
-                    <div class="detail-features">
-                        <h4>What's Included:</h4>
-                        <ul>
-                            <li>Age-appropriate safety guidelines</li>
-                            <li>Platform-specific security settings</li>
-                            <li>Cyberbullying prevention strategies</li>
-                            <li>Screen time management tips</li>
-                            <li>Privacy protection measures</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>Detailed Service Breakdown</h2>
 
-                <div class="service-detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Interactive Tools</h3>
-                    <p>Practical tools and assessments to help you implement digital safety measures.</p>
-                    <div class="detail-features">
-                        <h4>What's Included:</h4>
-                        <ul>
-                            <li>Digital safety assessment quizzes</li>
-                            <li>Screen time calculators</li>
-                            <li>Conversation starters for families</li>
-                            <li>Safety checklist generators</li>
-                            <li>Progress tracking tools</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="service-detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Community Support</h3>
-                    <p>Connect with other parents and experts in our supportive community environment.</p>
-                    <div class="detail-features">
-                        <h4>What's Included:</h4>
-                        <ul>
-                            <li>Private Facebook group access</li>
-                            <li>Monthly expert-led webinars</li>
-                            <li>Live Q&A sessions</li>
-                            <li>Peer support discussions</li>
-                            <li>Resource sharing platform</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="service-detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3>Expert Consultation</h3>
-                    <p>Personalized guidance from certified digital safety experts and child psychologists.</p>
-                    <div class="detail-features">
-                        <h4>What's Included:</h4>
-                        <ul>
-                            <li>One-on-one consultation sessions</li>
-                            <li>Customized safety plans</li>
-                            <li>Family-specific recommendations</li>
-                            <li>Follow-up support calls</li>
-                            <li>Emergency situation guidance</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="service-detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Workshops & Webinars</h3>
-                    <p>Live and on-demand sessions led by digital safety experts to keep your family informed and empowered.</p>
-                    <div class="detail-features">
-                        <h4>What's Included:</h4>
-                        <ul>
-                            <li>Monthly live workshops</li>
-                            <li>On-demand webinar library</li>
-                            <li>Interactive Q&A sessions</li>
-                            <li>Special guest speakers</li>
-                            <li>Certificates of completion</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-detail-card">
-                    <div class="detail-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Family Digital Wellness Plans</h3>
-                    <p>Customizable planners and resources to help your family set healthy digital goals and routines together.</p>
-                    <div class="detail-features">
-                        <h4>What's Included:</h4>
-                        <ul>
-                            <li>Printable wellness planners</li>
-                            <li>Goal-setting templates</li>
-                            <li>Progress tracking sheets</li>
-                            <li>Family agreement forms</li>
-                            <li>Motivational resources</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="service-detail-grid">
+          <div class="service-detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-book-open"></i>
             </div>
+            <h3>Educational Resources</h3>
+            <p>
+              Comprehensive guides covering all aspects of digital safety for
+              children of all ages.
+            </p>
+            <div class="detail-features">
+              <h4>What's Included:</h4>
+              <ul>
+                <li>Age-appropriate safety guidelines</li>
+                <li>Platform-specific security settings</li>
+                <li>Cyberbullying prevention strategies</li>
+                <li>Screen time management tips</li>
+                <li>Privacy protection measures</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Interactive Tools</h3>
+            <p>
+              Practical tools and assessments to help you implement digital
+              safety measures.
+            </p>
+            <div class="detail-features">
+              <h4>What's Included:</h4>
+              <ul>
+                <li>Digital safety assessment quizzes</li>
+                <li>Screen time calculators</li>
+                <li>Conversation starters for families</li>
+                <li>Safety checklist generators</li>
+                <li>Progress tracking tools</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Community Support</h3>
+            <p>
+              Connect with other parents and experts in our supportive community
+              environment.
+            </p>
+            <div class="detail-features">
+              <h4>What's Included:</h4>
+              <ul>
+                <li>Private Facebook group access</li>
+                <li>Monthly expert-led webinars</li>
+                <li>Live Q&A sessions</li>
+                <li>Peer support discussions</li>
+                <li>Resource sharing platform</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Expert Consultation</h3>
+            <p>
+              Personalized guidance from certified digital safety experts and
+              child psychologists.
+            </p>
+            <div class="detail-features">
+              <h4>What's Included:</h4>
+              <ul>
+                <li>One-on-one consultation sessions</li>
+                <li>Customized safety plans</li>
+                <li>Family-specific recommendations</li>
+                <li>Follow-up support calls</li>
+                <li>Emergency situation guidance</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3>Workshops & Webinars</h3>
+            <p>
+              Live and on-demand sessions led by digital safety experts to keep
+              your family informed and empowered.
+            </p>
+            <div class="detail-features">
+              <h4>What's Included:</h4>
+              <ul>
+                <li>Monthly live workshops</li>
+                <li>On-demand webinar library</li>
+                <li>Interactive Q&A sessions</li>
+                <li>Special guest speakers</li>
+                <li>Certificates of completion</li>
+              </ul>
+            </div>
+          </div>
+          <div class="service-detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Family Digital Wellness Plans</h3>
+            <p>
+              Customizable planners and resources to help your family set
+              healthy digital goals and routines together.
+            </p>
+            <div class="detail-features">
+              <h4>What's Included:</h4>
+              <ul>
+                <li>Printable wellness planners</li>
+                <li>Goal-setting templates</li>
+                <li>Progress tracking sheets</li>
+                <li>Family agreement forms</li>
+                <li>Motivational resources</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section class="service-testimonials">
-        <div class="container">
-            <h2>What Parents Say About Our Services</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The community membership has been a game-changer. I finally feel like I'm not alone in this digital parenting journey."</p>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria K.">
-                            <div>
-                                <h4>Maria K.</h4>
-                                <span>Community Member</span>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <h2>What Parents Say About Our Services</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "The community membership has been a game-changer. I finally
+                feel like I'm not alone in this digital parenting journey."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://randomuser.me/api/portraits/women/32.jpg"
+                  alt="Maria K."
+                />
+                <div>
+                  <h4>Maria K.</h4>
+                  <span>Community Member</span>
                 </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The expert consultation helped me create a perfect digital safety plan for my family. Worth every penny!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="David L.">
-                            <div>
-                                <h4>David L.</h4>
-                                <span>Premium Member</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The free resources are amazing! I've learned so much about keeping my kids safe online."</p>
-                        <div class="testimonial-author">
-                            <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Sarah M.">
-                            <div>
-                                <h4>Sarah M.</h4>
-                                <span>Free User</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "The expert consultation helped me create a perfect digital
+                safety plan for my family. Worth every penny!"
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://randomuser.me/api/portraits/men/45.jpg"
+                  alt="David L."
+                />
+                <div>
+                  <h4>David L.</h4>
+                  <span>Premium Member</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "The free resources are amazing! I've learned so much about
+                keeping my kids safe online."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://randomuser.me/api/portraits/women/67.jpg"
+                  alt="Sarah M."
+                />
+                <div>
+                  <h4>Sarah M.</h4>
+                  <span>Free User</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="service-faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item" style="background:#4FC3F7;color:#fff;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.07);margin-bottom:1.2rem;">
-                    <button class="faq-question" style="color:#fff;">
-                        What's the difference between the free and paid services?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer" style="color:#fff;">
-                        <p style="color:#fff;">Our free services provide access to basic resources like the digital safety toolkit, guides, and blog articles. Paid services include community access, expert consultations, personalized support, and additional interactive tools.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="background:#81C784;color:#fff;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.07);margin-bottom:1.2rem;">
-                    <button class="faq-question" style="color:#fff;">
-                        Can I cancel my subscription anytime?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer" style="color:#fff;">
-                        <p style="color:#fff;">Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees. You'll continue to have access to paid features until the end of your current billing period.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="background:#FFD54F;color:#fff;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.07);margin-bottom:1.2rem;">
-                    <button class="faq-question" style="color:#fff;">
-                        How do the expert consultations work?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer" style="color:#fff;">
-                        <p style="color:#fff;">Expert consultations are conducted via video call or phone. Our certified digital safety experts will assess your family's specific needs and create a customized digital safety plan. Follow-up support is included.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="background:#EC407A;color:#fff;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.07);margin-bottom:1.2rem;">
-                    <button class="faq-question" style="color:#fff;">
-                        What age groups do you support?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer" style="color:#fff;">
-                        <p style="color:#fff;">We provide resources and support for parents of children from toddlers to teenagers (ages 2-18). Our content is tailored to different developmental stages and digital maturity levels.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="background:#BA68C8;color:#fff;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.07);margin-bottom:1.2rem;">
-                    <button class="faq-question" style="color:#fff;">
-                        Is there a money-back guarantee?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer" style="color:#fff;">
-                        <p style="color:#fff;">Yes, we offer a 30-day money-back guarantee for all paid services. If you're not satisfied with our services, contact us within 30 days for a full refund.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="background:#007F7B;color:#fff;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.07);margin-bottom:1.2rem;">
-                    <button class="faq-question" style="color:#fff;">
-                        How do I access the community features?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer" style="color:#fff;">
-                        <p style="color:#fff;">Once you subscribe to a paid plan, you'll receive an invitation to join our private Facebook group. You'll also get access to our webinar platform and community resources.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div
+            class="faq-item"
+            style="
+              background: #4fc3f7;
+              color: #fff;
+              border-radius: 16px;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+              margin-bottom: 1.2rem;
+            "
+          >
+            <button class="faq-question" style="color: #fff">
+              What's the difference between the free and paid services?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" style="color: #fff">
+              <p style="color: #fff">
+                Our free services provide access to basic resources like the
+                digital safety toolkit, guides, and blog articles. Paid services
+                include community access, expert consultations, personalized
+                support, and additional interactive tools.
+              </p>
             </div>
+          </div>
+          <div
+            class="faq-item"
+            style="
+              background: #81c784;
+              color: #fff;
+              border-radius: 16px;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+              margin-bottom: 1.2rem;
+            "
+          >
+            <button class="faq-question" style="color: #fff">
+              Can I cancel my subscription anytime?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" style="color: #fff">
+              <p style="color: #fff">
+                Yes, you can cancel your subscription at any time. There are no
+                long-term contracts or cancellation fees. You'll continue to
+                have access to paid features until the end of your current
+                billing period.
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item"
+            style="
+              background: #ffd54f;
+              color: #fff;
+              border-radius: 16px;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+              margin-bottom: 1.2rem;
+            "
+          >
+            <button class="faq-question" style="color: #fff">
+              How do the expert consultations work?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" style="color: #fff">
+              <p style="color: #fff">
+                Expert consultations are conducted via video call or phone. Our
+                certified digital safety experts will assess your family's
+                specific needs and create a customized digital safety plan.
+                Follow-up support is included.
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item"
+            style="
+              background: #ec407a;
+              color: #fff;
+              border-radius: 16px;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+              margin-bottom: 1.2rem;
+            "
+          >
+            <button class="faq-question" style="color: #fff">
+              What age groups do you support?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" style="color: #fff">
+              <p style="color: #fff">
+                We provide resources and support for parents of children from
+                toddlers to teenagers (ages 2-18). Our content is tailored to
+                different developmental stages and digital maturity levels.
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item"
+            style="
+              background: #ba68c8;
+              color: #fff;
+              border-radius: 16px;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+              margin-bottom: 1.2rem;
+            "
+          >
+            <button class="faq-question" style="color: #fff">
+              Is there a money-back guarantee?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" style="color: #fff">
+              <p style="color: #fff">
+                Yes, we offer a 30-day money-back guarantee for all paid
+                services. If you're not satisfied with our services, contact us
+                within 30 days for a full refund.
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item"
+            style="
+              background: #007f7b;
+              color: #fff;
+              border-radius: 16px;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+              margin-bottom: 1.2rem;
+            "
+          >
+            <button class="faq-question" style="color: #fff">
+              How do I access the community features?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer" style="color: #fff">
+              <p style="color: #fff">
+                Once you subscribe to a paid plan, you'll receive an invitation
+                to join our private Facebook group. You'll also get access to
+                our webinar platform and community resources.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta">
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Choose the service level that's right for your family and start your digital safety journey today.</p>
-            <div class="cta-buttons">
-                <a href="toolkit.html" class="cta-button">Explore Free Resources</a>
-                <a href="contact.html" class="cta-button secondary">Contact Us</a>
-            </div>
+      <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <p>
+          Choose the service level that's right for your family and start your
+          digital safety journey today.
+        </p>
+        <div class="cta-buttons">
+          <a href="toolkit.html" class="cta-button">Explore Free Resources</a>
+          <a href="contact.html" class="cta-button secondary">Contact Us</a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>DSA Parent Kit</h3>
-                    <p>Empowering parents in the digital age.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/16bkCEHA2z/?mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/dsaparentalsurvivalkit/profilecard/?igsh=MXBrZjNwd3BxZGVrdQ==\" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="toolkit.html">Toolkit</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#pricing">Pricing Plans</a></li>
-                        <li><a href="contact.html">Consultations</a></li>
-                        <li><a href="#community">Community</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Use</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>DSA Parent Kit</h3>
+            <p>Empowering parents in the digital age.</p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/16bkCEHA2z/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/dsaparentalsurvivalkit/profilecard/?igsh=MXBrZjNwd3BxZGVrdQ==\"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="toolkit.html">Toolkit</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="resources.html">Resources</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#pricing">Pricing Plans</a></li>
+              <li><a href="contact.html">Consultations</a></li>
+              <li><a href="#community">Community</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 DSA Parent Kit. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script>
-        // FAQ functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const faqItem = this.parentElement;
-                    const answer = this.nextElementSibling;
-                    
-                    // Close other open FAQs
-                    document.querySelectorAll('.faq-item.active').forEach(item => {
-                        if (item !== faqItem) {
-                            item.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current FAQ
-                    faqItem.classList.toggle('active');
-                });
+      // FAQ functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", function () {
+            const faqItem = this.parentElement;
+            const answer = this.nextElementSibling;
+
+            // Close other open FAQs
+            document.querySelectorAll(".faq-item.active").forEach((item) => {
+              if (item !== faqItem) {
+                item.classList.remove("active");
+              }
             });
 
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+            // Toggle current FAQ
+            faqItem.classList.toggle("active");
+          });
         });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
     </script>
-</body>
-</html> 
+  </body>
+</html>

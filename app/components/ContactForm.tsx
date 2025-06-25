@@ -1,110 +1,109 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 interface FormData {
-  name: string
-  email: string
-  subject: string
-  message: string
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 
 interface FormErrors {
-  name?: string
-  email?: string
-  subject?: string
-  message?: string
+  name?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
 }
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const [errors, setErrors] = useState<FormErrors>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null)
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null,
+  );
 
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {}
+    const newErrors: FormErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required'
+      newErrors.name = "Name is required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'
+      newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Invalid email address'
+      newErrors.email = "Invalid email address";
     }
 
     if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required'
+      newErrors.subject = "Subject is required";
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required'
+      newErrors.message = "Message is required";
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!validateForm()) {
-      return
+      return;
     }
 
-    setIsSubmitting(true)
-    setSubmitStatus(null)
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
+      });
 
-      const data = await response.json()
+      const data = await response.json();
 
       if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({ name: '', email: '', subject: '', message: '' })
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        setSubmitStatus('error')
+        setSubmitStatus("error");
       }
     } catch (error) {
-      setSubmitStatus('error')
+      setSubmitStatus("error");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }))
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-text"
-        >
+        <label htmlFor="name" className="block text-sm font-medium text-text">
           Name
         </label>
         <input
@@ -114,7 +113,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           className={`mt-1 block w-full rounded-md border ${
-            errors.name ? 'border-red-300' : 'border-gray-300'
+            errors.name ? "border-red-300" : "border-gray-300"
           } px-3 py-2 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary`}
         />
         {errors.name && (
@@ -123,10 +122,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-text"
-        >
+        <label htmlFor="email" className="block text-sm font-medium text-text">
           Email
         </label>
         <input
@@ -136,7 +132,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           className={`mt-1 block w-full rounded-md border ${
-            errors.email ? 'border-red-300' : 'border-gray-300'
+            errors.email ? "border-red-300" : "border-gray-300"
           } px-3 py-2 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary`}
         />
         {errors.email && (
@@ -158,7 +154,7 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleChange}
           className={`mt-1 block w-full rounded-md border ${
-            errors.subject ? 'border-red-300' : 'border-gray-300'
+            errors.subject ? "border-red-300" : "border-gray-300"
           } px-3 py-2 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary`}
         />
         {errors.subject && (
@@ -180,7 +176,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           className={`mt-1 block w-full rounded-md border ${
-            errors.message ? 'border-red-300' : 'border-gray-300'
+            errors.message ? "border-red-300" : "border-gray-300"
           } px-3 py-2 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary`}
         />
         {errors.message && (
@@ -188,7 +184,7 @@ export default function ContactForm() {
         )}
       </div>
 
-      {submitStatus === 'success' && (
+      {submitStatus === "success" && (
         <div className="rounded-md bg-green-50 p-4">
           <p className="text-sm text-green-700">
             Thank you for your message! We'll get back to you soon.
@@ -196,10 +192,11 @@ export default function ContactForm() {
         </div>
       )}
 
-      {submitStatus === 'error' && (
+      {submitStatus === "error" && (
         <div className="rounded-md bg-red-50 p-4">
           <p className="text-sm text-red-700">
-            Sorry, there was an error sending your message. Please try again later.
+            Sorry, there was an error sending your message. Please try again
+            later.
           </p>
         </div>
       )}
@@ -209,8 +206,8 @@ export default function ContactForm() {
         disabled={isSubmitting}
         className="w-full rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
-  )
-} 
+  );
+}

@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   // This would typically fetch the post data from a CMS or database
   const post = {
-    title: 'Understanding Your Child\'s Digital World',
+    title: "Understanding Your Child's Digital World",
     content: `
       <p>In today's digital age, children are growing up surrounded by technology. As parents, it's crucial to understand the digital landscape your children navigate daily.</p>
 
@@ -31,12 +31,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <h2>Open Communication</h2>
       <p>Maintaining open communication with your child about their digital activities is essential. Regular conversations about online safety can help build trust and awareness.</p>
     `,
-    image: '/images/blog/digital-world.jpg',
-    date: 'March 15, 2024',
-    author: 'Dr. Sarah Johnson',
-    category: 'Digital Literacy',
-    readingTime: '8 min read'
-  }
+    image: "/images/blog/digital-world.jpg",
+    date: "March 15, 2024",
+    author: "Dr. Sarah Johnson",
+    category: "Digital Literacy",
+    readingTime: "8 min read",
+  };
 
   return (
     <div className="min-h-screen">
@@ -98,7 +98,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">{post.author}</h3>
-                  <p className="text-text/70">Child Psychologist & Digital Safety Expert</p>
+                  <p className="text-text/70">
+                    Child Psychologist & Digital Safety Expert
+                  </p>
                 </div>
               </div>
             </div>
@@ -116,18 +118,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export function generateStaticParams() {
   return [
-    { slug: 'best-educational-apps' },
-    { slug: 'cyberbullying-prevention' },
-    { slug: 'digital-safety-conversations' },
-    { slug: 'online-privacy-guide' },
-    { slug: 'parental-controls-guide' },
-    { slug: 'screen-time-management' },
-    { slug: 'social-media-safety-guide' },
-    { slug: 'social-media-safety-guide-new' },
+    { slug: "best-educational-apps" },
+    { slug: "cyberbullying-prevention" },
+    { slug: "digital-safety-conversations" },
+    { slug: "online-privacy-guide" },
+    { slug: "parental-controls-guide" },
+    { slug: "screen-time-management" },
+    { slug: "social-media-safety-guide" },
+    { slug: "social-media-safety-guide-new" },
   ];
-} 
+}

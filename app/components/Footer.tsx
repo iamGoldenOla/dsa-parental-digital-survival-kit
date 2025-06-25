@@ -1,32 +1,32 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Footer() {
   const footerLinks = {
-    'Quick Links': [
-      { name: 'Home', href: '/' },
-      { name: 'About', href: '/about' },
-      { name: 'Toolkit', href: '/toolkit' },
-      { name: 'Resources', href: '/resources' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/contact' },
+    "Quick Links": [
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Toolkit", href: "/toolkit" },
+      { name: "Resources", href: "/resources" },
+      { name: "Blog", href: "/blog" },
+      { name: "Contact", href: "/contact" },
     ],
-    'Resources': [
-      { name: 'Guides', href: '/guides' },
-      { name: 'Checklists', href: '/checklists' },
-      { name: 'Expert Advice', href: '/expert-advice' },
-      { name: 'FAQ', href: '/faq' },
+    Resources: [
+      { name: "Guides", href: "/guides" },
+      { name: "Checklists", href: "/checklists" },
+      { name: "Expert Advice", href: "/expert-advice" },
+      { name: "FAQ", href: "/faq" },
     ],
-    'Legal': [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
+    Legal: [
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
+      { name: "Cookie Policy", href: "/cookies" },
     ],
-  }
+  };
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: '📘' },
-    { name: 'Instagram', href: '#', icon: '📸' },
-  ]
+    { name: "Facebook", href: "#", icon: "📘" },
+    { name: "Instagram", href: "#", icon: "📸" },
+  ];
 
   return (
     <footer className="footer py-10 mt-16 border-t border-gray-200 dark:border-gray-700 bg-footer text-footer-text">
@@ -36,7 +36,12 @@ export default function Footer() {
           <p className="mb-4">Empowering parents in the digital age.</p>
           <div className="flex space-x-4">
             {socialLinks.map((link) => (
-              <a key={link.name} href={link.href} aria-label={link.name} className="text-2xl hover:text-primary transition-colors duration-200">
+              <a
+                key={link.name}
+                href={link.href}
+                aria-label={link.name}
+                className="text-2xl hover:text-primary transition-colors duration-200"
+              >
                 <span>{link.icon}</span>
               </a>
             ))}
@@ -48,7 +53,10 @@ export default function Footer() {
             <ul>
               {links.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="hover:text-primary transition-colors duration-200">
+                  <Link
+                    href={link.href}
+                    className="hover:text-primary transition-colors duration-200"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -61,5 +69,5 @@ export default function Footer() {
         &copy; 2025 DSA Parent Kit. All rights reserved.
       </div>
     </footer>
-  )
-} 
+  );
+}
