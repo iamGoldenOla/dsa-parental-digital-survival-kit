@@ -35,6 +35,7 @@ export default function Navigation() {
   };
 
   const toggleMobileMenu = () => {
+    console.log("Toggle mobile menu clicked, current state:", isMobileMenuOpen);
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -59,7 +60,7 @@ export default function Navigation() {
       <div className="logo flex-shrink-0">
         <Link href="/" onClick={closeMobileMenu}>
           <img
-            src="/images/BDM.webp"
+            src="/BDM.webp"
             alt="BDM Logo"
             className="h-12 w-auto md:h-16 lg:h-20"
           />
@@ -163,7 +164,7 @@ export default function Navigation() {
         <button
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
-          className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+          className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 z-60"
         >
           {isMobileMenuOpen ? (
             <XMarkIcon className="h-6 w-6" />
@@ -174,19 +175,13 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div
-          className="md:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
-          onClick={closeMobileMenu}
-        />
-      )}
+      <div
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? "open" : ""}`}
+        onClick={closeMobileMenu}
+      />
 
       {/* Mobile Menu */}
-      <div
-        className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
+      <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
         <div className="flex flex-col h-full">
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
